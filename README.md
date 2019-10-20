@@ -1,4 +1,5 @@
-#                                        编程读书笔记
+| | Big | Small | | -- | -- | -- | | File | cover.jpg | cover_small.jpg | | Size(in pixels) | 1800x2360 | 200x262 |
+# 编程读书笔记
 
 [传送门](/SUMMARY.md)
 
