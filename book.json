@@ -1,0 +1,27 @@
+{
+    "title": "RJ编程驿站",
+    "author": "周瑞进",
+    "plugins": ["autocover","disqus","github","splitter","toggle-chapters"],
+    "pluginsConfig": {
+        "autocover": {
+            "font": {
+                "size": null,
+                "family": "Impact",
+                "color": "#FFF"
+            },
+            "size": {
+                "w": 1800,
+                "h": 2360
+            },
+            "background": {
+                "color": "#09F"
+            }
+        },
+        "disqus": {
+            "shortName": "gitbookuse"
+        },
+        "github": {
+            "url": "https://github.com/344310362"
+        }
+    }
+}
