@@ -1,7 +1,14 @@
 {
     "title": "RJ编程驿站",
     "author": "周瑞进",
-    "plugins": ["disqus","github","splitter","toggle-chapters"],
+    "plugins": [
+    "disqus",
+    "github",
+    "splitter",
+    "toggle-chapters",
+    "donate",
+    "-sharing"
+    ],
     "pluginsConfig": {
         "autocover": {
             "font": {
@@ -22,6 +29,15 @@
         },
         "github": {
             "url": "https://github.com/344310362"
-        }
+        },
+        "donate": {
+            "wechat": "http://7q5c2h.com1.z0.glb.clouddn.com/wechatpay.JPG",
+            "title": "",
+            "button": "赏",
+            "wechatText": "微信打赏"
+        },
+        "all": [
+        "weibo","qq","qzone","google","douban"
+        ]
     }
 }
