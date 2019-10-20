@@ -1,7 +1,7 @@
 {
     "title": "RJ编程驿站",
     "author": "周瑞进",
-    "plugins": ["mathjax","autocover"],
+    "plugins": ["mathjax","autocover","disqus"],
     "pluginsConfig": {
         "autocover": {
             "font": {
@@ -16,6 +16,9 @@
             "background": {
                 "color": "#09F"
             }
+        },
+        "disqus": {
+            "shortName": "gitbookuse"
         }
     }
 }
