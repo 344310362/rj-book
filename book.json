@@ -1,7 +1,7 @@
 {
     "title": "RJ编程驿站",
     "author": "周瑞进",
-    "plugins": ["autocover","disqus","github","splitter","toggle-chapters"],
+    "plugins": ["disqus","github","splitter","toggle-chapters"],
     "pluginsConfig": {
         "autocover": {
             "font": {
