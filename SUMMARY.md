@@ -3,4 +3,31 @@
 * [封面](README.md)
 * [1.引言](chapter2/README.md)
   * [1.1.概述](chapter2/11-gai-shu.md)
+* [运维](yun-wei.md)
+  * [服务安装](yun-wei/fu-wu-an-zhuang.md)
+    * [mysql](yun-wei/fu-wu-an-zhuang/mysql.md)
+    * [redis](yun-wei/fu-wu-an-zhuang/redis.md)
+    * rabbitmq
+    * [sonarqube](yun-wei/fu-wu-an-zhuang/sonarqube.md)
+    * docker
+    * kuberneters
+    * gitlab
+    * elasticsearch
+  * 问题排查
+* [编程语言](yu-yan.md)
+  * [JAVA](yu-yan/java.md)
+  * [GO](go.md)
+  * [PYTHON](yu-yan/python.md)
+  * [PHP](yu-yan/php.md)
+* [中间件](spring.md)
+  * mysql
+  * redis
+  * rabbitmq
+* spring
+* tomcat
+* [大数据](da-shu-ju.md)
+* [devops](devops.md)
+* [云原生](yun-yuan-sheng.md)
+* [区块链](qu-kuai-lian.md)
+* [前端](qian-duan.md)
 
