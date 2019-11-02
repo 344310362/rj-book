@@ -23,8 +23,9 @@
   * mysql
   * redis
   * rabbitmq
-* spring
-* tomcat
+* [spring](spring.md)
+  * [循环依赖解决方案](spring/xun-huan-yi-lai-jie-jue-fang-an.md)
+* [tomcat](tomcat.md)
 * [大数据](da-shu-ju.md)
 * [devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
