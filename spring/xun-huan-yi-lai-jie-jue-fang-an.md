@@ -97,7 +97,9 @@ Spring容器先创建单例StudentA，StudentA依赖StudentB，然后将A放在�
 
 如果是setter方式注入的话，我们最好先看一张Spring中Bean实例化的图
 
-![](/assets/spring/spring_bean_instance_process.png)如图中前两步骤得知：Spring是先将Bean对象实例化之后再设置对象属性的
+![](/assets/spring/spring_bean_instance_process.png)
+
+如图中前两步骤得知：Spring是先将Bean对象实例化之后再设置对象属性的
 
 修改配置文件为set方式注入
 
@@ -215,7 +217,4 @@ Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException:
 ### 为什么原型模式就报错了呢 ？
 
 对于“prototype”作用域Bean，Spring容器无法完成依赖注入，因为“prototype”作用域的Bean，Spring容器不进行缓存，因此无法提前暴露一个创建中的Bean。
-
-  
-
 
