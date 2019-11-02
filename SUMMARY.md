@@ -19,13 +19,9 @@
   * [GO](go.md)
   * [PYTHON](yu-yan/python.md)
   * [PHP](yu-yan/php.md)
-* [中间件](spring.md)
-  * mysql
-  * redis
-  * rabbitmq
+* [tomcat](tomcat.md)
 * [spring](spring.md)
   * [循环依赖解决方案](spring/xun-huan-yi-lai-jie-jue-fang-an.md)
-* [tomcat](tomcat.md)
 * [大数据](da-shu-ju.md)
 * [devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
