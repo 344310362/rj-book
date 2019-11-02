@@ -15,7 +15,8 @@
     * elasticsearch
   * 问题排查
 * [编程语言](yu-yan.md)
-  * [JAVA](yu-yan/java.md)
+  * [java](yu-yan/java.md)
+    * [java代理](yu-yan/java/javadai-li.md)
   * [GO](go.md)
   * [PYTHON](yu-yan/python.md)
   * [PHP](yu-yan/php.md)
