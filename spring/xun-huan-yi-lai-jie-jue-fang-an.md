@@ -59,6 +59,23 @@ public class StudentC {
 
 ```
 
-test
+上面是很基本的3个类，，StudentA有参构造是StudentB。StudentB的有参构造是StudentC，StudentC的有参构造是StudentA ，这样就产生了一个循环依赖的情况，
+我们都把这三个Bean交给Spring管理，并用有参构造实例化。
+
+
+```
+    <bean id="a" class="com.zfx.student.StudentA">
+        <constructor-arg index="0" ref="b"></constructor-arg>
+    </bean>
+    <bean id="b" class="com.zfx.student.StudentB">
+        <constructor-arg index="0" ref="c"></constructor-arg>
+    </bean>
+    <bean id="c" class="com.zfx.student.StudentC">
+        <constructor-arg index="0" ref="a"></constructor-arg>
+    </bean>
+
+```
+
+
 
 
