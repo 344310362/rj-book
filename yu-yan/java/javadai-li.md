@@ -14,7 +14,48 @@
 
 ## 静态代理
 
-定义接口和接口的实现类, 然后定义接口的代理对象, 将接口的实例注入到代理对象中, 然后通过代理对象去调用真正的实现类，实现过程非常简单也比较容易理解, 静态代理的代理关系在编译期间就已经确定了的。
+定义接口和接口的实现类, 然后定义接口的代理对象, 将接口的实例注入到代理对象中, 然后通过代理对象去调用真正的实现类，实现过程非常简单也比较容易理解, **静态代理的代理关系在编译期间就已经确定了**。
+
+```
+// 委托接口
+public interface IHelloService {
+ /**
+ * 定义接口方法
+ * @param userName
+ * @return
+ */
+ String sayHello(String userName);
+}
+// 委托类实现
+public class HelloService implements IHelloService {
+ @Override
+ public String sayHello(String userName) {
+ System.out.println("helloService" + userName);
+ return "HelloService" + userName;
+ }
+}
+// 代理类
+public class StaticProxyHello implements IHelloService {
+ private IHelloService helloService = new HelloService();
+ @Override
+ public String sayHello(String userName) {
+ /** 代理对象可以在此处包装一下*/
+ System.out.println("代理对象包装礼盒...");
+ return helloService.sayHello(userName);
+ }
+}
+// 测试静态代理类
+public class MainStatic {
+ public static void main(String[] args) {
+ StaticProxyHello staticProxyHello = new StaticProxyHello();
+ staticProxyHello.sayHello("isole");
+ }
+}
+```
+
+## 动态代理
+
+代理类在程序运行时创建的代理方式被成为 动态代理。
 
 
 
