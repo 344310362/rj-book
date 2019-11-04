@@ -1,34 +1,34 @@
 # Summary
 
 * [封面](README.md)
-* [1.引言](chapter2/README.md)
-  * [1.1.概述](chapter2/11-gai-shu.md)
+* [引言](chapter2/README.md)
 * [运维](yun-wei.md)
   * [服务安装](yun-wei/fu-wu-an-zhuang.md)
     * [mysql](yun-wei/fu-wu-an-zhuang/mysql.md)
     * [redis](yun-wei/fu-wu-an-zhuang/redis.md)
-    * rabbitmq
+    * [rabbitmq](yun-wei/fu-wu-an-zhuang/rabbitmq.md)
     * [sonarqube](yun-wei/fu-wu-an-zhuang/sonarqube.md)
-    * docker
-    * kuberneters
-    * gitlab
-    * elasticsearch
-  * 问题排查
+    * [docker](yun-wei/fu-wu-an-zhuang/docker.md)
+    * [kuberneters](yun-wei/fu-wu-an-zhuang/kuberneters.md)
+    * [gitlab](yun-wei/fu-wu-an-zhuang/gitlab.md)
+    * [elasticsearch](yun-wei/fu-wu-an-zhuang/elasticsearch.md)
+  * [问题排查](yun-wei/wen-ti-pai-cha.md)
 * [编程语言](yu-yan.md)
-  * [java](yu-yan/java.md)
+  * [Java](yu-yan/java.md)
     * [java代理](yu-yan/java/javadai-li.md)
     * [类的加载过程](yu-yan/java/lei-de-jia-zai-guo-cheng.md)
     * [jvm内存模型](yu-yan/java/jvmnei-cun-mo-xing.md)
-  * [go](go.md)
-  * [python](yu-yan/python.md)
-  * [php](yu-yan/php.md)
-* [tomcat](tomcat.md)
-  * [tomcat类加载机制](tomcat/tomcatlei-jia-zai-ji-zhi.md)
-* [spring](spring.md)
+    * [jvm问题排查工具](yu-yan/java/jvmwen-ti-pai-cha-gong-ju.md)
+  * [Go](go.md)
+  * [Python](yu-yan/python.md)
+  * [Php](yu-yan/php.md)
+* [Tomcat](tomcat.md)
+  * [Tomcat类加载机制](tomcat/tomcatlei-jia-zai-ji-zhi.md)
+* [Spring](spring.md)
   * [循环依赖解决方案](spring/xun-huan-yi-lai-jie-jue-fang-an.md)
+  * [Bean的初始化](beande-chu-shi-hua.md)
 * [大数据](da-shu-ju.md)
-* [devops](devops.md)
+  * [Hadoop安装](da-shu-ju/hadoopan-zhuang.md)
+* [Devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
-* [区块链](qu-kuai-lian.md)
-* [前端](qian-duan.md)
 
