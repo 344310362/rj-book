@@ -309,6 +309,9 @@ start-all.sh
 7023 Jps
 ```
 
+* 日志查看
+  如果相应的进程没有看到，可以查看下日志，具体看啊可能日志里面提示了什么![](/assets/bigdata/hadoop_install_log.png)
+
 ## Hadoop访问
 
 ![](/assets/bigdata/hadoop_install_view1.png)
