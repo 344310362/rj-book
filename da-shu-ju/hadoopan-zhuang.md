@@ -7,5 +7,19 @@
 * 官网说明：[https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 * hadoop下载地址：[https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/current2/](https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/current2/)
 
+## 环境准备
+
+节点机器
+
+* 机器hostname分别设置成node1/node2/node3,并且/etc/hosts添加如下路由信息
+
+```
+10.8.229.42	node1
+10.8.229.43	node2
+10.8.229.44     node3
+```
+
+
+
 
 
