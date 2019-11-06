@@ -61,6 +61,44 @@ ssh -p 63501 localhost // ssh 的端口如果是22就无需要额外指定
 
 **注意点**：密钥是根据当前hostname设置的，如果hostname有变化了，之前公钥就用不了了，需要重新设置，重新分发到其它机器。
 
+### 操作用户
+
+笔者的操作使用的是root用户，如果是生产用最好新建一个hadoop用户，并设置相关的权限。_下面是参考的命名，该安装并没有执行下面的命令_。
+
+```
+1、首先新建用户，adduser命令
+
+　　sudo adduser hadoop
+
+　　passwd hadoop
+
+　　输入密码之后，一路 y 确定。
+
+2、添加用户组
+
+　　在创建hadoop用户的同时也创建了hadoop用户组，下面我们把hadoop用户加入到hadoop用户组下面
+
+　　sudo usermod -a -G hadoop hadoop
+
+　　前面一个hadoop是组名，后面一个hadoop是用户名。完成后查询
+
+　　cat /etc/group
+
+3、赋予root权限【实验环境可以设置大点】
+
+　　先切换到root的用户
+
+　　sudo nano /etc/sudoers
+
+　　修改文件如下：
+
+　　　　在　　root　　ALL=(ALL)　　ALL　　下面添加：
+
+　　　　　　　hadoop　　ALL=(ALL)　　ALL
+
+　　保存退出，hadoop用户就拥有了root权限了
+```
+
 ## Hadoop 安装
 
 * 解压软件
