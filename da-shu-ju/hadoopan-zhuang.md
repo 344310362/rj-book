@@ -78,7 +78,22 @@ mv hadoop-3.2.1.tar.gz hadoop
 * 配置环境变量
 
 ```
-tar -zxvf hadoop-3.2.1.tar.gz -C /usr/local/
+vi /etc/profile
+
+JAVA_HOME=/usr/local/java/jdk1.8.0_231
+HADOOP_HOME=/usr/local/hadoop
+CLASS_PATH=.:$JAVA_HOME/lib
+PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+export JAVA_HOME ZOOKEEPER_HOME HADOOP_HOME CLASS_PATH PATH
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_YARN_HOME=$HADOOP_HOME
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+
+source /etc/profile
 ```
 
 
