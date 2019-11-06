@@ -40,18 +40,46 @@ rpm -qa|grep ssh
 ssh-keygen -t rsa -P ""
 ```
 
-1. 将自己也设置成免密登录
+2.将自己也设置成免密登录
 
 ```
 cat ~/.ssh/id_rsa.pub >> authorized_keys
 ```
 
-2.将公钥发送到需要免密登录的机器上
+3.将公钥发送到需要免密登录的机器上
 
 ```
 ssh-copy-id -p 63501 node2
 ssh-copy-id -p 63501 node3
 ```
 
-注意点：密钥是根据当前hostname设置的，如果hostname有变化了，之前公钥就用不了了，需要重新设置，重新分发到其它机器。
+4.无密码验证登录
+
+```
+ssh -p 63501 localhost // ssh 的端口如果是22就无需要额外指定
+```
+
+**注意点**：密钥是根据当前hostname设置的，如果hostname有变化了，之前公钥就用不了了，需要重新设置，重新分发到其它机器。
+
+## Hadoop 安装
+
+* 解压软件
+
+```
+tar -zxvf hadoop-3.2.1.tar.gz -C /usr/local/
+```
+
+* 重命名
+
+```
+mv hadoop-3.2.1.tar.gz hadoop
+```
+
+* 配置环境变量
+
+```
+tar -zxvf hadoop-3.2.1.tar.gz -C /usr/local/
+```
+
+
 
