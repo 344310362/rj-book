@@ -143,6 +143,7 @@ source /etc/profile
 * hdfs-site.xml
 * mapred-site.xml
 * yarn-site.xml
+* workers
 
 ### 配置修改
 
@@ -259,6 +260,14 @@ export YARN_NODEMANAGER_USER=root
     <value>node1:8088</value>
 </property>
 </configuration>
+```
+
+#### workers
+
+```
+node1
+node2
+node3
 ```
 
 ## 其它节点
