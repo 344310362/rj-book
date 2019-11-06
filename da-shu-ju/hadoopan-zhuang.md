@@ -310,7 +310,8 @@ start-all.sh
 ```
 
 * 日志查看
-  如果相应的进程没有看到，可以查看下日志，具体看日志里面提示了什么![](/assets/bigdata/hadoop_install_log.png)
+  如果相应的进程没有看到，可以查看下日志，具体看日志里面提示了什么
+  ![](/assets/bigdata/hadoop_install_log.png)
 
 ## Hadoop访问
 
