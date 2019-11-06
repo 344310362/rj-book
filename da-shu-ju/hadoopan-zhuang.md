@@ -141,7 +141,6 @@ source /etc/profile
   * hadoop-env.sh
   * hdfs-site.xml
   * mapred-site.xml
-
   * yarn-site.xml
 
 
