@@ -9,7 +9,7 @@
 
 ## 环境准备
 
-节点机器
+### 节点机器
 
 * 机器hostname分别设置成node1/node2/node3,并且/etc/hosts添加如下路由信息
 
@@ -19,10 +19,39 @@
 10.8.229.44    node3
 ```
 
-软件版本
+### 软件版本
 
 * java: jdk1.8.0\_231
 * hadoop: 3.2.1
+
+### SSH
+
+检查是否安装了SSH
+
+```
+rpm -qa|grep ssh
+```
+
+设置免密登录
+
+1.创建ssh-key，这里我们采用rsa方式，使用如下命令：【一路回车】
+
+```
+ssh-keygen -t rsa -P ""
+```
+
+2. 将自己也设置成免密登录
+
+```
+cat ~/.ssh/id_rsa.pub >> authorized_keys
+```
+
+2.将公钥发送到需要免密登录的机器上
+
+```
+ssh-copy-id -p 63501 node2
+ssh-copy-id -p 63501 node3
+```
 
 
 
