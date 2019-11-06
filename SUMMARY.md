@@ -13,6 +13,7 @@
     * [gitlab](yun-wei/fu-wu-an-zhuang/gitlab.md)
     * [elasticsearch](yun-wei/fu-wu-an-zhuang/elasticsearch.md)
   * [问题排查](yun-wei/wen-ti-pai-cha.md)
+    * [Java\_dump](yun-wei/wen-ti-pai-cha/javadump.md)
 * [编程语言](yu-yan.md)
   * [Java](yu-yan/java.md)
     * [java代理](yu-yan/java/javadai-li.md)
