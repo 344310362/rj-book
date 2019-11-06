@@ -40,7 +40,7 @@ rpm -qa|grep ssh
 ssh-keygen -t rsa -P ""
 ```
 
-2. 将自己也设置成免密登录
+1. 将自己也设置成免密登录
 
 ```
 cat ~/.ssh/id_rsa.pub >> authorized_keys
@@ -53,5 +53,5 @@ ssh-copy-id -p 63501 node2
 ssh-copy-id -p 63501 node3
 ```
 
-
+注意点：密钥是根据当前hostname设置的，如果hostname有变化了，之前公钥就用不了了，需要重新设置，重新分发到其它机器。
 
