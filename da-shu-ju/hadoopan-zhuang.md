@@ -134,5 +134,15 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 source /etc/profile
 ```
 
+## Hadoop配置
+
+* 核心配置
+  * core-site.xml
+  * hadoop-env.sh
+  * hdfs-site.xml
+  * mapred-site.xml
+
+  * yarn-site.xml
+
 
 
