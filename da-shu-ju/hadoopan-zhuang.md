@@ -63,7 +63,7 @@ ssh -p 63501 localhost // ssh 的端口如果是22就无需要额外指定
 
 ### 操作用户
 
-笔者的操作使用的是root用户，如果是生产用最好新建一个hadoop用户，并设置相关的权限。_下面是参考的命名，该安装并没有执行下面的命令_。
+笔者的操作使用的是root用户，如果是生产用最好新建一个hadoop用户，并设置相关的权限。_下面是参考的命令，该安装并没有执行下面的命令_。
 
 ```
 1、首先新建用户，adduser命令
@@ -283,7 +283,6 @@ hdfs namenode -format
   HDFS_SECONDARYNAMENODE_USER=root
   HDFS_DATANODE_SECURE_USER=root
   ```
-
 * 修改 stop-dfs.sh 用户权限
 
 * ```
@@ -292,7 +291,6 @@ hdfs namenode -format
   HDFS_SECONDARYNAMENODE_USER=root
   HDFS_DATANODE_SECURE_USER=root
   ```
-
 * 自动所有进程
 
 ```
