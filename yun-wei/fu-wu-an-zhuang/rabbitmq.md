@@ -4,8 +4,11 @@
 
 ### erlang
 - 下载 erlang-19.0.4-1.el7.centos.x86_64.rpm
-    - https://www.rabbitmq.com/releases/erlang/
+    
+    https://www.rabbitmq.com/releases/erlang/
+    
 - 安装
+
 ```
 rpm -ivh erlang-19.0.4-1.el7.centos.x86_64.rpm 
 ```
