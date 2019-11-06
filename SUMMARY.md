@@ -33,5 +33,5 @@
   * [Hadoop\(一\)安装](da-shu-ju/hadoopan-zhuang.md)
 * [Devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
-* 性能测试
+* 压力测试
 
