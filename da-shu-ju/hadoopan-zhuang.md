@@ -261,6 +261,23 @@ export YARN_NODEMANAGER_USER=root
 </configuration>
 ```
 
+## 其它节点
+
+通过 scp 命令把 hadoop 和 java 目录传送到别的节点
+
+```
+scp -r /usr/local/hadoop root@node2:/usr/local/hadoop 
+scp -r /usr/local/hadoop root@node3:/usr/local/hadoop 
+
+scp -r /usr/local/java root@node2:/usr/local/java 
+scp -r /usr/local/java root@node3:/usr/local/java
+```
+
+其它环节变量也要在对应的节点设置
+
+* JAVA\_HOME
+* HADOOP\_HOME
+
 ## Hadoop 启动
 
 ### 初始化
@@ -311,22 +328,20 @@ start-all.sh
 
 * 日志查看
   如果相应的进程没有看到，可以查看下日志，具体看日志里面提示了什么
-  
+
 ![](/assets/bigdata/hadoop_install_log.png)
 
 ## Hadoop访问
 
 ### HDFS页面
+
 > 查看NameNode状态; 该端口的定义位于core-default.xml中，可以在hdfs-site.xml 中修改;
 
 ![](/assets/bigdata/hadoop_install_view1.png)
 
-
-
 ### YARN管理界面
+
 > yarn-site.xml 里面可以修改
 
 ![](/assets/bigdata/hadoop_install_view2.png)
-
-
 
