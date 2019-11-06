@@ -14,12 +14,15 @@
 * 机器hostname分别设置成node1/node2/node3,并且/etc/hosts添加如下路由信息
 
 ```
-10.8.229.42	node1
-10.8.229.43	node2
+10.8.229.42    node1
+10.8.229.43    node2
 10.8.229.44     node3
 ```
 
+软件版本
 
+* java: jdk1.8.0\_231
+* hadoop: 3.2.1
 
 
 
