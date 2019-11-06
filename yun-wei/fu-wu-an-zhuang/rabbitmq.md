@@ -57,7 +57,6 @@ Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 8.0.3
 
 - 修改 WEB UI的访问端口
 
-```
 
 ```
 # 到 /etc/rabbitmq/rabbitmq.conf 搜索“rabbitmq_management”关键字，把对应的port 改掉
@@ -70,8 +69,8 @@ Erlang (SMP,ASYNC_THREADS,HIPE) (BEAM) emulator version 8.0.3
                {ip,       "0.0.0.0"},
                {ssl,      false}]}
    %% One of 'basic', 'detailed' or 'none'. See
-
 ```
+
 重启 rabbit-server 后生效
 
 
