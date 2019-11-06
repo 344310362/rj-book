@@ -136,12 +136,155 @@ source /etc/profile
 
 ## Hadoop配置
 
-* 核心配置
-  * core-site.xml
-  * hadoop-env.sh
-  * hdfs-site.xml
-  * mapred-site.xml
-  * yarn-site.xml
+### 核心配置
+
+* core-site.xml
+* hadoop-env.sh
+* hdfs-site.xml
+* mapred-site.xml
+* yarn-site.xml
+
+### 配置修改
+
+#### 当前工作目录
+
+```
+[root@node1 hadoop]# pwd
+/usr/local/hadoop/etc/hadoop
+```
+
+#### core-site.xml
+
+```
+<configuration>
+<!-- 指定HDFS老大（namenode）的通信地址 -->
+        <property>
+            <name>fs.defaultFS</name>
+            <value>hdfs://node1:9000</value>
+        </property>
+        <properyt>
+                <name>hadoop.tmp.dir</name>
+                <value>/usr/local/hadoop/tmp</value>
+        </properyt>
+</configuration>
+
+```
+
+#### hadoop-env.sh
+
+```
+export JAVA_HOME=/usr/local/java/jdk1.8.0_231
+export HADOOP_PID_DIR=/usr/local/hadoop/tmp/pids
+export HDFS_NAMENODE_USER=root
+export HDFS_DATANODE_USER=root
+export HDFS_SECONDARYNAMENODE_USER=root
+export YARN_RESOURCEMANAGER_USER=root
+export YARN_NODEMANAGER_USER=root
+```
+
+#### hdfs-site.xml
+
+```
+<configuration>
+    <property>
+            <name>dfs.namenode.http-address</name>
+            <value>node1:50070</value>
+    </property>
+    <property>
+            <name>dfs.namenode.secondary.http-address</name>
+            <value>node2:50090</value>
+    </property>
+
+
+    <!-- <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:/usr/local/hadoop/namenode</value>
+        <description>namenode上存储hdfs名字空间元数据 </description>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:/usr/local/hadoop/datanode</value>
+        <description>datanode上数据块的物理存储位置</description>
+    </property>-->
+    <!-- 设置hdfs副本数量 -->
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+
+</configuration>
+```
+
+#### mapred-site.xml
+
+```
+<configuration>
+        <property>
+                <name>mapreduce.framework.name</name>
+                <value>yarn</value>
+        </property>
+<property>
+  <name>yarn.app.mapreduce.am.env</name>
+  <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+</property>
+<property>
+  <name>mapreduce.map.env</name>
+  <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+</property>
+<property>
+  <name>mapreduce.reduce.env</name>
+  <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+</property>
+
+
+</configuration>
+```
+
+#### yarn-site.xml
+
+```
+<configuration>
+
+<!-- Site specific YARN configuration properties -->
+<property>
+  <name>yarn.resourcemanager.hostname</name>
+  <value>node1</value>
+</property>
+<property>
+ <name>yarn.nodemanager.aux-services</name>
+ <value>mapreduce_shuffle</value>
+</property>
+
+<property>
+    <name>yarn.resourcemanager.webapp.address</name>
+    <value>node1:8088</value>
+</property>
+</configuration>
+
+```
+
+## Hadoop 启动
+
+### 初始化
+
+```
+hdfs namenode -format
+```
+
+### 启动和停止脚本
+
+```
+脚本所在目录：/usr/local/hadoop/sbin ，sbin我们上面已经添加到PATH里面了，所以任何一个地方都能执行
+```
+
+* 需要先修改下权限
+* 
+```
+HDFS_DATANODE_USER=root
+HDFS_NAMENODE_USER=root
+HDFS_SECONDARYNAMENODE_USER=root
+HDFS_DATANODE_SECURE_USER=root
+```
 
 
 
