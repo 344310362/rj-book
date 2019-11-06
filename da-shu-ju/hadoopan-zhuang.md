@@ -311,11 +311,21 @@ start-all.sh
 
 * 日志查看
   如果相应的进程没有看到，可以查看下日志，具体看日志里面提示了什么
-![](/assets/bigdata/hadoop_install_log.png)
+  ![](/assets/bigdata/hadoop_install_log.png)
 
 ## Hadoop访问
 
+### HDFS页面
+> 查看NameNode状态; 该端口的定义位于core-default.xml中，可以在hdfs-site.xml 中修改;
+
 ![](/assets/bigdata/hadoop_install_view1.png)
 
+
+
+### YARN管理界面
+> yarn-site.xml 里面可以修改
+
 ![](/assets/bigdata/hadoop_install_view2.png)
+
+
 
