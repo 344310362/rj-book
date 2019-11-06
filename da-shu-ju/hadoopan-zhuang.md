@@ -167,7 +167,6 @@ source /etc/profile
                 <value>/usr/local/hadoop/tmp</value>
         </properyt>
 </configuration>
-
 ```
 
 #### hadoop-env.sh
@@ -260,7 +259,6 @@ export YARN_NODEMANAGER_USER=root
     <value>node1:8088</value>
 </property>
 </configuration>
-
 ```
 
 ## Hadoop 启动
@@ -274,17 +272,48 @@ hdfs namenode -format
 ### 启动和停止脚本
 
 ```
-脚本所在目录：/usr/local/hadoop/sbin ，sbin我们上面已经添加到PATH里面了，所以任何一个地方都能执行
+脚本所在目录：/usr/local/hadoop/sbin  sbin我们上面已经添加到PATH里面了，所以任何一个地方都能执行
 ```
 
-* 需要先修改下权限
-* 
+* 修改 start-dfs.sh 用户权限
+
+* ```
+  HDFS_DATANODE_USER=root
+  HDFS_NAMENODE_USER=root
+  HDFS_SECONDARYNAMENODE_USER=root
+  HDFS_DATANODE_SECURE_USER=root
+  ```
+
+* 修改 stop-dfs.sh 用户权限
+
+* ```
+  HDFS_DATANODE_USER=root
+  HDFS_NAMENODE_USER=root
+  HDFS_SECONDARYNAMENODE_USER=root
+  HDFS_DATANODE_SECURE_USER=root
+  ```
+
+* 自动所有进程
+
 ```
-HDFS_DATANODE_USER=root
-HDFS_NAMENODE_USER=root
-HDFS_SECONDARYNAMENODE_USER=root
-HDFS_DATANODE_SECURE_USER=root
+start-all.sh
 ```
 
+* 查看启动的进程
 
+```
+[root@node1 sbin]# jps
+29536 NodeManager
+27348 DataNode
+6022 SecondaryNameNode
+26873 NameNode
+29324 ResourceManager
+7023 Jps
+```
+
+## Hadoop访问
+
+![](/assets/bigdata/hadoop_install_view1.png)
+
+![](/assets/bigdata/hadoop_install_view2.png)
 
