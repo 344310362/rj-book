@@ -38,8 +38,8 @@ tar -zxvf apache-hive-3.1.2-bin.tar.gz -C /usr/local/hive
 * 配置环境变量
 
 ```
-  在之前hadoop的基础上面添加了hive的信息
-  vi /etc/profile
+在之前hadoop的基础上面添加了hive的信息
+vi /etc/profile
 ```
 
 ```
