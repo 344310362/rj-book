@@ -21,19 +21,19 @@ Mysql在这边是用来存储Hive的元数据，即Hive的表结构信息，如�
 
 ## Hive安装
 
-* 新建目录
+### 新建目录
 
 ```
 mkdir /usr/local/hive
 ```
 
-* 解压软件
+### 解压软件
 
 ```
 tar -zxvf apache-hive-3.1.2-bin.tar.gz -C /usr/local/hive
 ```
 
-* 配置环境变量
+### 配置环境变量
 
 ```
 在之前hadoop的基础上面添加了hive的信息
@@ -57,6 +57,59 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 
 source /etc/profile
+```
+
+### 修改Hive配置
+
+```
+[root@node1 conf]# pwd
+/usr/local/hive/apache-hive-3.1.2-bin/conf
+[root@node1 conf]# cp hive-env.sh.template hive-env.sh
+[root@node1 conf]# cp hive-default.xml.template hive-site.xml
+```
+
+* `hive-env.sh`添加以下内容
+
+```
+export JAVA_HOME=/usr/local/java/jdk1.8.0_231
+export HADOOP_HOME=/usr/local/hadoop
+export HIVE_HOME=/usr/local/hive/apache-hive-3.1.2-bin
+```
+
+* 修改`hive-site.xml`
+
+```
+<property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>com.mysql.jdbc.Driver</value>
+    <description>Driver class name for a JDBC metastore</description>
+</property>
+<property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>root</value>
+    <description>username to use against metastore database</description>
+ </property>
+<property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>UIojkl@908</value>
+    <description>password to use against metastore database</description>
+</property>
+<property>
+    <name>hive.metastore.warehouse.dir</name>
+    <value>/usr/local/hive/apache-hive-3.1.2-bin/hive_datawarehouse</value>
+    <description>location of default database for the warehouse</description>
+</property>
+<property>
+    <name>hive.exec.scratchdir</name>
+    <value>/usr/local/hive/apache-hive-3.1.2-bin/hive_data/tmp</value>
+    <description>HDFS root scratch dir for Hive jobs which gets created with write all (733) permission. For each connecting user, an HDFS scratch dir: ${hive.exec.scratchdir}/&lt;username&gt; is created, with ${hive.scratch.dir.permission}.</description>
+</property>
+<property>
+    <name>hive.querylog.location</name>
+    <value>/usr/local/hive/apache-hive-3.1.2-bin/hive_data/log</value>
+    <description>Location of Hive run time structured log file</description>
+</property>
+
 ```
 
 
