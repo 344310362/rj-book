@@ -40,8 +40,8 @@ tar -zxvf apache-hive-3.1.2-bin.tar.gz -C /usr/local/hive
 ```
   在之前hadoop的基础上面添加了hive的信息
   vi /etc/profile
-
 ```
+
 ```
 ## 
 HIVE_HOME=/usr/local/hive/apache-hive-3.1.2-bin
