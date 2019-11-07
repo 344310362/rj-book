@@ -109,7 +109,6 @@ export HIVE_HOME=/usr/local/hive/apache-hive-3.1.2-bin
     <value>/usr/local/hive/apache-hive-3.1.2-bin/hive_data/log</value>
     <description>Location of Hive run time structured log file</description>
 </property>
-
 ```
 
 
