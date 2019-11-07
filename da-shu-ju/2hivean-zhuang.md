@@ -28,18 +28,22 @@ Mysql在这边是用来存储Hive的元数据，即Hive的表结构信息，如�
 ```
 mkdir /usr/local/hive
 ```
+
 * 解压软件
 
 ```
 tar -zxvf apache-hive-3.1.2-bin.tar.gz -C /usr/local/hive
-
 ```
+
 * 配置环境变量
 
 ```
-vi /etc/profile
-## 在之前hadoop的基础上面添加了hive的信息
+  在之前hadoop的基础上面添加了hive的信息
+  vi /etc/profile
 
+```
+```
+## 
 HIVE_HOME=/usr/local/hive/apache-hive-3.1.2-bin
 JAVA_HOME=/usr/local/java/jdk1.8.0_231
 HADOOP_HOME=/usr/local/hadoop
