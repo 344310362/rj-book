@@ -8,7 +8,15 @@
 
 官方的下载页面有对应说明，我们上一篇的Hadoop是3.2.1，所以Hive我们选择 3.1.2
 
-[http://hive.apache.org/downloads.html](http://hive.apache.org/downloads.html)
+* 版本说明：[http://hive.apache.org/downloads.html](http://hive.apache.org/downloads.html)
+
+* 下载地址：[https://mirrors.tuna.tsinghua.edu.cn/apache/hive/](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/)
+
+## 安装MySQL
+
+```
+Mysql在这边是用来存储Hive的元数据，即Hive的表结构信息
+```
 
 
 
