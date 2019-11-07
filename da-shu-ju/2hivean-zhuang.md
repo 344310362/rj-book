@@ -24,6 +24,7 @@ Mysql在这边是用来存储Hive的元数据，即Hive的表结构信息，如�
 ## Hive安装
 
 * 新建目录
+
 ```
 mkdir /usr/local/hive
 ```
@@ -31,6 +32,7 @@ mkdir /usr/local/hive
 
 ```
 tar -zxvf apache-hive-3.1.2-bin.tar.gz -C /usr/local/hive
+
 ```
 * 配置环境变量
 
