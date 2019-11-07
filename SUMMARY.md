@@ -31,6 +31,7 @@
   * [Bean的初始化](beande-chu-shi-hua.md)
 * [大数据](da-shu-ju.md)
   * [1.Hadoop安装](da-shu-ju/hadoopan-zhuang.md)
+  * [2.Hive安装](da-shu-ju/2hivean-zhuang.md)
 * [Devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
 * 压力测试
