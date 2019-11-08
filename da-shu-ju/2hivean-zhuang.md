@@ -181,7 +181,12 @@ hive替换成和hdoop一样的版本
 
 ```
 schematool -dbType mysql -initSchema
+```
 
+## Hive启动
+
+```
+hive --service metastore 
 ```
 
 
