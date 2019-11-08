@@ -79,6 +79,20 @@ export HIVE_HOME=/usr/local/hive/apache-hive-3.1.2-bin
 * 修改`hive-site.xml`
 
 ```
+## 在比较开始的地方添加这些
+
+<property>
+   <name>system:java.io.tmpdir</name>
+   <value>/home/root/hdp/tmpdir</value>
+</property>
+
+<property>
+     <name>system:user.name</name>
+     <value>hive</value>
+</property>
+```
+
+```
 <property>
     <name>javax.jdo.option.ConnectionDriverName</name>
     <value>com.mysql.jdbc.Driver</value>
@@ -168,7 +182,6 @@ hive替换成和hdoop一样的版本
 ```
 schematool -dbType mysql -initSchema
 
-mysql -h localhost -P 63751 -u root -p
 ```
 
 
