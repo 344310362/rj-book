@@ -326,5 +326,7 @@ drwxr-xr-x   - root supergroup          0 2019-11-08 12:53 /user/hive/warehouse/
 -rw-r--r--   1 root supergroup          9 2019-11-08 12:52 /user/hive/warehouse/hive_1.db/hive_01/000000_0
 ```
 
-通过webUI查看![](/assets/bigdata/hive/view1.png)
+通过webUI查看
+
+![](/assets/bigdata/hive/view1.png)
 
