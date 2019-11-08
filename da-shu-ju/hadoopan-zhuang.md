@@ -444,24 +444,34 @@ http://sourceforge.net/projects/slicing-by-8/    1
 开启防火墙
 
 ```
-
+systemctl start firewalld.service
 ```
 
+添加防火墙规则（对指定ip开放指定端口）
 
+```
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.142.166" port protocol="tcp" port="5432" accept"
+```
 
+重启防火墙，使配置生效
 
+```
+systemctl restart firewalld.service
+```
 
+查看配置结果，验证配置
 
+```
+firewall-cmd --list-all
+```
 
+删除规则
 
+```
+firewall-cmd --permanent --remove-rich-rule="rule family="ipv4" source address="192.168.142.166" port protocol="tcp" port="11300" accept"
 
-
-
-
-
-
-
-
+systemctl restart firewalld.service
+```
 
 
 
