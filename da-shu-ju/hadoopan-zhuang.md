@@ -352,5 +352,7 @@ start-all.sh
 
 > yarn-site.xml 里面可以修改
 
-![](/assets/bigdata/hadoop_install_view2.png)
+## ![](/assets/bigdata/hadoop_install_view2.png)体验
+
+hadoop里面自带了mapreduce
 
