@@ -113,7 +113,7 @@ export HIVE_HOME=/usr/local/hive/apache-hive-3.1.2-bin
 
 ### 执行Hive
 
-执行hive的命令时候报了下面的错误，显然是guava包的版本冲突。
+执行hive的命令时候报了下面的错误，显然是guava包的版本冲突。【hadoop和hive的版本是根据官方提示的安装的，竟然还有这种问题】
 
 ```
 [hadoop@a74f90aecdad tmp]$ hive
