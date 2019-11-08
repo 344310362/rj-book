@@ -354,5 +354,12 @@ start-all.sh
 
 ## ![](/assets/bigdata/hadoop_install_view2.png)体验
 
-hadoop里面自带了mapreduce
+hadoop里面自带了mapreduce例子，下面我们执行一个wordcount来计算文本
+
+```
+
+hadoop jar hadoop-mapreduce-examples-3.2.1.jar wordcount /input /output
+```
+
+
 
