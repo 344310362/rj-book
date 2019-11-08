@@ -111,5 +111,55 @@ export HIVE_HOME=/usr/local/hive/apache-hive-3.1.2-bin
 </property>
 ```
 
+### 执行Hive
+
+执行hive的命令时候报了下面的错误，显然是guava包的版本冲突。
+
+```
+[hadoop@a74f90aecdad tmp]$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/hive/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Exception in thread "main" java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
+    at org.apache.hadoop.conf.Configuration.set(Configuration.java:1357)
+    at org.apache.hadoop.conf.Configuration.set(Configuration.java:1338)
+    at org.apache.hadoop.mapred.JobConf.setJar(JobConf.java:536)
+    at org.apache.hadoop.mapred.JobConf.setJarByClass(JobConf.java:554)
+    at org.apache.hadoop.mapred.JobConf.<init>(JobConf.java:448)
+    at org.apache.hadoop.hive.conf.HiveConf.initialize(HiveConf.java:5141)
+    at org.apache.hadoop.hive.conf.HiveConf.<init>(HiveConf.java:5099)
+    at org.apache.hadoop.hive.common.LogUtils.initHiveLog4jCommon(LogUtils.java:97)
+    at org.apache.hadoop.hive.common.LogUtils.initHiveLog4j(LogUtils.java:81)
+    at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:699)
+    at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:683)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:498)
+    at org.apache.hadoop.util.RunJar.run(RunJar.java:323)
+    at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+```
+
+全局搜索了下，发下以下hadoop和hive的guava包版本不一致。
+
+```
+[root@node1 ~]# find / -name *guava*
+/usr/local/hadoop/share/hadoop/common/lib/guava-27.0-jre.jar
+/usr/local/hadoop/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+/usr/local/hadoop/share/hadoop/hdfs/lib/guava-27.0-jre.jar
+/usr/local/hadoop/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+/usr/local/hive/apache-hive-3.1.2-bin/lib/guava-19.0.jar
+/usr/local/hive/apache-hive-3.1.2-bin/lib/jersey-guava-2.25.1.jar
+```
+
+hive替换成和hdoop一样的版本
+
+```
+[root@node1 lib]# mv /usr/local/hive/apache-hive-3.1.2-bin/lib/guava-19.0.jar /home/back/lib/
+[root@node1 lib]# cp /usr/local/hadoop/share/hadoop/common/lib/guava-27.0-jre.jar /usr/local/hive/apache-hive-3.1.2-bin/lib/guava-19.0.jar
+```
+
 
 
