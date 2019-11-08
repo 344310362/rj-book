@@ -439,5 +439,33 @@ http://sourceforge.net/projects/slicing-by-8/    1
 ...
 ```
 
+## 安全问题
+
+开启防火墙
+
+```
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
