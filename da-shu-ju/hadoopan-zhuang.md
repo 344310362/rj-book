@@ -361,6 +361,11 @@ hadoop里面自带了mapreduce例子，下面我们执行一个wordcount来计�
 3. 指定执行算法后查看output目录
 
 ```
+hadoop fs -mkdir /input
+hadoop fs -put LICENSE.txt /input
+```
+
+```
 [root@node1 mapreduce]# pwd
 /usr/local/hadoop/share/hadoop/mapreduce
 hadoop jar hadoop-mapreduce-examples-3.2.1.jar wordcount /input /output
@@ -400,40 +405,38 @@ Found 2 items
 [root@node1 hadoop]# hadoop fs -cat /output/test2/part-r-00000
 
 
-hardware	1
-hardware)	1
-harmless	1
-has	22
-have	24
-having	4
-held	3
-here	2
-here.	4
-hereafter	4
-hereby	30
-herein	5
-herein,	1
-herein.	3
-herein. 	1
-hereof.	3
-hereto,	1
-hereunder	6
-hereunder,	2
-hereunder.	4
-history	1
-history,	1
-hold	1
-honor	2
-how	5
-however	2
-however,	4
-http://angularjs.org	1
-http://code.google.com/p/lz4/	1
-http://golang.org/LICENSE	1
-http://sourceforge.net/projects/slicing-by-8/	1
+hardware    1
+hardware)    1
+harmless    1
+has    22
+have    24
+having    4
+held    3
+here    2
+here.    4
+hereafter    4
+hereby    30
+herein    5
+herein,    1
+herein.    3
+herein.     1
+hereof.    3
+hereto,    1
+hereunder    6
+hereunder,    2
+hereunder.    4
+history    1
+history,    1
+hold    1
+honor    2
+how    5
+however    2
+however,    4
+http://angularjs.org    1
+http://code.google.com/p/lz4/    1
+http://golang.org/LICENSE    1
+http://sourceforge.net/projects/slicing-by-8/    1
 ...
-
-
 ```
 
 
