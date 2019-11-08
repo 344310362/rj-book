@@ -354,12 +354,57 @@ start-all.sh
 
 ## ![](/assets/bigdata/hadoop_install_view2.png)体验
 
-hadoop里面自带了mapreduce例子，下面我们执行一个wordcount来计算文本
+hadoop里面自带了mapreduce例子，下面我们执行一个wordcount来计算文本中的单词个数
+
+1. 选取hadoop安装目录的 LICENSE.txt 文件进行统计
+2. 讲 LICENSE.txt 存在到hadoop的目录中
+3. 指定执行算法后查看output目录
+
+
 
 ```
-
+[root@node1 mapreduce]# pwd
+/usr/local/hadoop/share/hadoop/mapreduce
 hadoop jar hadoop-mapreduce-examples-3.2.1.jar wordcount /input /output
+
+2019-11-08 14:01:30,463 INFO client.RMProxy: Connecting to ResourceManager at node1/10.8.229.42:8032
+2019-11-08 14:01:32,067 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1572962076850_0005
+2019-11-08 14:01:32,343 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2019-11-08 14:01:32,717 INFO input.FileInputFormat: Total input files to process : 1
+2019-11-08 14:01:32,793 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2019-11-08 14:01:32,973 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2019-11-08 14:01:32,994 INFO mapreduce.JobSubmitter: number of splits:1
+2019-11-08 14:01:33,336 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2019-11-08 14:01:33,793 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1572962076850_0005
+2019-11-08 14:01:33,794 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2019-11-08 14:01:34,364 INFO conf.Configuration: resource-types.xml not found
+2019-11-08 14:01:34,365 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2019-11-08 14:01:34,575 INFO impl.YarnClientImpl: Submitted application application_1572962076850_0005
+2019-11-08 14:01:34,694 INFO mapreduce.Job: The url to track the job: http://node1:8088/proxy/application_1572962076850_0005/
+2019-11-08 14:01:34,696 INFO mapreduce.Job: Running job: job_1572962076850_0005
+2019-11-08 14:01:50,101 INFO mapreduce.Job: Job job_1572962076850_0005 running in uber mode : false
+2019-11-08 14:01:50,105 INFO mapreduce.Job:  map 0% reduce 0%
+2019-11-08 14:02:00,324 INFO mapreduce.Job:  map 100% reduce 0%
+2019-11-08 14:02:10,559 INFO mapreduce.Job:  map 100% reduce 100%
+2019-11-08 14:02:11,595 INFO mapreduce.Job: Job job_1572962076850_0005 completed successfully
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
