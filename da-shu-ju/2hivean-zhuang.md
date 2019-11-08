@@ -191,7 +191,7 @@ hive                        // 启动客户端，是可以直接用客户端访�
 hive --service hwi          // hive提供网页GUI来访问Hive数据仓库 默认端口9999
 ```
 
-报错
+启动服务端报错
 
 ```
 root@node1 conf]# hive --service metastore 
@@ -219,6 +219,15 @@ Caused by: MetaException(message:Exception thrown obtaining schema column inform
     at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:108)
     at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:80)
     ... 11 more
+```
+
+```
+# 把下面的配置改成false，启动的时候就没有报错了，可能是我上面初始化数据库过了
+<property>
+    <name>datanucleus.schema.autoCreateAll</name>
+    <value>false</value>
+    <description>Auto creates necessary schema on a startup if one doesn't exist. Set this to false, after creating it once.To enable auto create also set hive.metastore.schema.verification=false. Auto creation is not recommended for production use cases, run schematool command instead.</description>
+  </property>
 ```
 
 
