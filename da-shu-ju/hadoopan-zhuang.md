@@ -385,24 +385,56 @@ hadoop jar hadoop-mapreduce-examples-3.2.1.jar wordcount /input /output
 2019-11-08 14:02:00,324 INFO mapreduce.Job:  map 100% reduce 0%
 2019-11-08 14:02:10,559 INFO mapreduce.Job:  map 100% reduce 100%
 2019-11-08 14:02:11,595 INFO mapreduce.Job: Job job_1572962076850_0005 completed successfully
-
 ```
 
+```
+[root@node1 hadoop]# hadoop fs -ls /output/
+Found 3 items
+-rw-r--r--   1 root supergroup          0 2019-11-05 22:41 /output/_SUCCESS
+-rw-r--r--   1 root supergroup      35324 2019-11-05 22:41 /output/part-r-00000
+drwxr-xr-x   - root supergroup          0 2019-11-08 14:02 /output/test2
+[root@node1 hadoop]# hadoop fs -ls /output/test2
+Found 2 items
+-rw-r--r--   1 root supergroup          0 2019-11-08 14:02 /output/test2/_SUCCESS
+-rw-r--r--   1 root supergroup      35324 2019-11-08 14:02 /output/test2/part-r-00000
+[root@node1 hadoop]# hadoop fs -cat /output/test2/part-r-00000
 
 
+hardware	1
+hardware)	1
+harmless	1
+has	22
+have	24
+having	4
+held	3
+here	2
+here.	4
+hereafter	4
+hereby	30
+herein	5
+herein,	1
+herein.	3
+herein. 	1
+hereof.	3
+hereto,	1
+hereunder	6
+hereunder,	2
+hereunder.	4
+history	1
+history,	1
+hold	1
+honor	2
+how	5
+however	2
+however,	4
+http://angularjs.org	1
+http://code.google.com/p/lz4/	1
+http://golang.org/LICENSE	1
+http://sourceforge.net/projects/slicing-by-8/	1
+...
 
 
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
