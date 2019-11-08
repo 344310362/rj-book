@@ -230,5 +230,54 @@ Caused by: MetaException(message:Exception thrown obtaining schema column inform
   </property>
 ```
 
+## 体验
+
+* 通过hive客户端进来
+* 创建了 hive\_1 数据库
+* hive_1 地下创建了 hive_01 表
+
+```
+[root@node1 conf]# hive
+which: no hbase in (/usr/lib64/qt-3.3/bin:/usr/local/java/jdk1.8.0_231/bin:/usr/local/hadoop/bin:/usr/local/hadoop/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/hive/apache-hive-3.1.2-bin/bin:/root/bin)
+Hive Session ID = 6540942e-292a-4f75-a672-7a1c0f1a09f0
+
+Logging initialized using configuration in jar:file:/usr/local/hive/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+Hive Session ID = cfbf866f-c004-4162-85aa-5c72169cbec0
+hive> create database hive_1;
+OK
+Time taken: 2.098 seconds
+hive>  show databases;
+OK
+default
+hive_1
+Time taken: 0.456 seconds, Fetched: 2 row(s)
+hive> use hive_1;
+OK
+Time taken: 0.101 seconds
+hive> create table hive_01 (id int,name string);
+OK
+Time taken: 1.983 seconds
+hive> show tables;
+OK
+hive_01
+Time taken: 0.108 seconds, Fetched: 1 row(s)
+hive> select * from hive_01;
+OK
+Time taken: 4.626 seconds
+```
+
+* 插入数据
+* 查询
+
+```
+insert into hive_01(id,name) values(1,'zhourj');
+
+hive> select * from hive_01;
+OK
+1	zhourj
+Time taken: 0.527 seconds, Fetched: 1 row(s)
+```
+
 
 
