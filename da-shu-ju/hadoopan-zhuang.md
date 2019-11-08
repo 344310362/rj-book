@@ -452,10 +452,11 @@ systemctl start firewalld.service
 ```
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.43" port protocol="tcp" port="8088" accept"
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.44" port protocol="tcp" port="8088" accept"
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="8088" accept"
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.149.194" port protocol="tcp" port="8088" accept"
 
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="63501" accept"
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.149.194" port protocol="tcp" port="63501" accept"
-
 ```
 
 重启防火墙，使配置生效
