@@ -357,10 +357,8 @@ start-all.sh
 hadoop里面自带了mapreduce例子，下面我们执行一个wordcount来计算文本中的单词个数
 
 1. 选取hadoop安装目录的 LICENSE.txt 文件进行统计
-2. 讲 LICENSE.txt 存在到hadoop的目录中
+2. 将 LICENSE.txt 存在到hadoop的目录中
 3. 指定执行算法后查看output目录
-
-
 
 ```
 [root@node1 mapreduce]# pwd
