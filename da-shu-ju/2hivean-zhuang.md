@@ -161,5 +161,15 @@ hive替换成和hdoop一样的版本
 [root@node1 lib]# cp /usr/local/hadoop/share/hadoop/common/lib/guava-27.0-jre.jar /usr/local/hive/apache-hive-3.1.2-bin/lib/guava-19.0.jar
 ```
 
+### 在mysql中hive的schema
+
+在此之前需要创建mysql下的hive数据库
+
+```
+schematool -dbType mysql -initSchema
+
+mysql -h localhost -P 63751 -u root -p
+```
+
 
 
