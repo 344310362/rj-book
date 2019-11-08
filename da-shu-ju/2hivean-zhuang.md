@@ -234,7 +234,7 @@ Caused by: MetaException(message:Exception thrown obtaining schema column inform
 
 * 通过hive客户端进来
 * 创建了 hive\_1 数据库
-* hive_1 地下创建了 hive_01 表
+* hive\_1 地下创建了 hive\_01 表
 
 ```
 [root@node1 conf]# hive
@@ -275,8 +275,22 @@ insert into hive_01(id,name) values(1,'zhourj');
 
 hive> select * from hive_01;
 OK
-1	zhourj
+1    zhourj
 Time taken: 0.527 seconds, Fetched: 1 row(s)
+```
+
+hive相当于在hadoop上面搭建的一个数据库，我们建的表都是在hadoop里面的，上面引入的mysql是为了存储hive里面的一些元数据，比如hive里面有什么数据库什么表信息。两者不要混了。
+
+* 查看hadoop里面的文件
+
+```
+[root@node1 conf]# hadoop fs -lsr /
+drwxr-xr-x   - root supergroup          0 2019-11-08 12:44 /user
+drwxr-xr-x   - root supergroup          0 2019-11-08 12:44 /user/hive
+drwxr-xr-x   - root supergroup          0 2019-11-08 12:44 /user/hive/warehouse
+drwxr-xr-x   - root supergroup          0 2019-11-08 12:48 /user/hive/warehouse/hive_1.db
+drwxr-xr-x   - root supergroup          0 2019-11-08 12:53 /user/hive/warehouse/hive_1.db/hive_01
+-rw-r--r--   1 root supergroup          9 2019-11-08 12:52 /user/hive/warehouse/hive_1.db/hive_01/000000_0
 ```
 
 
