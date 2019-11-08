@@ -450,13 +450,22 @@ systemctl start firewalld.service
 添加防火墙规则（对指定ip开放指定端口）
 
 ```
+# 9000端口开放
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.43" port protocol="tcp" port="9000" accept"
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.44" port protocol="tcp" port="9000" accept"
+
+
+# 设置yarn 管理界面的权限
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.43" port protocol="tcp" port="8088" accept"
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.44" port protocol="tcp" port="8088" accept"
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="8088" accept"
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.149.194" port protocol="tcp" port="8088" accept"
 
-firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="63501" accept"
-firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.149.194" port protocol="tcp" port="63501" accept"
+# hdfs 访问界面 
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="50070" accept"
+
+# 开发本机的远程访问端口
+xxx
 ```
 
 重启防火墙，使配置生效
