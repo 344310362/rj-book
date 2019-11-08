@@ -253,6 +253,7 @@ Caused by: MetaException(message:Exception thrown obtaining schema column inform
 
 ```
 
+这次修改hive-site.xml文档配置
 ```
 # 把下面的配置改成false，启动的时候就没有报错了，可能是我上面初始化数据库过了
 <property>
