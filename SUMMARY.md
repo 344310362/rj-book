@@ -20,6 +20,7 @@
     * [类的加载过程](yu-yan/java/lei-de-jia-zai-guo-cheng.md)
     * [jvm内存模型](yu-yan/java/jvmnei-cun-mo-xing.md)
     * [jvm问题排查工具](yu-yan/java/jvmwen-ti-pai-cha-gong-ju.md)
+    * [string那点事](yu-yan/java/stringna-dian-shi.md)
   * [Go](go.md)
   * [Python](yu-yan/python.md)
   * [Php](yu-yan/php.md)
@@ -32,7 +33,7 @@
 * [大数据](da-shu-ju.md)
   * [1.Hadoop安装](da-shu-ju/hadoopan-zhuang.md)
   * [2.Hive安装](da-shu-ju/2hivean-zhuang.md)
-  * 3.Hbase安装
+  * [3.Hbase安装](da-shu-ju/3hbasean-zhuang.md)
 * [Devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
 * 压力测试
