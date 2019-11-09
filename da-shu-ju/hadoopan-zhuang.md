@@ -441,17 +441,20 @@ http://sourceforge.net/projects/slicing-by-8/    1
 
 ## 安全问题
 
-开启防火墙
+> 上面开放出来的web控制端都是不需要密钥的，所以我这边直接用防火墙策略做了点限制。
+
+
+* 开启防火墙
 
 ```
 systemctl start firewalld.service
 ```
 
-添加防火墙规则（对指定ip开放指定端口）
+* 添加防火墙规则（对指定ip开放指定端口）
 
 ```
 # 先开放本机的远程访问端口
-xxx
+xxx【小心远程访问端口禁了访问不了】
 
 # 9000端口开放
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.43" port protocol="tcp" port="9000" accept"
@@ -473,19 +476,19 @@ firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.44" port protocol="tcp" port="9864" accept"
 ```
 
-重启防火墙，使配置生效
+* 重启防火墙，使配置生效
 
 ```
 systemctl restart firewalld.service
 ```
 
-查看配置结果，验证配置
+* 查看配置结果，验证配置
 
 ```
 firewall-cmd --list-all
 ```
 
-删除规则
+* 删除规则
 
 ```
 firewall-cmd --permanent --remove-rich-rule="rule family="ipv4" source address="10.8.229.42" port protocol="tcp" port="8088" accept"
