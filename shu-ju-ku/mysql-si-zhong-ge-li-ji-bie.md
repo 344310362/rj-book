@@ -52,5 +52,9 @@ SQL标准定义了4类隔离级别，包括了一些具体规则，用来限定�
 
 ### 多版本并发控制机制（MVCC）
 
+Mysql InnoDB存储引擎基于Multi-Version Concurrency Control（MVCC，多版本的并发控制协议）实现。
+
+MVCC是通过保存数据在某个时间点的快照来实现的；优点是：读不加锁，读写不冲突。
+
 
 
