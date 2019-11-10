@@ -91,8 +91,6 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-
-
 ## PS
 
 * 在JDK6.0及之前版本，字符串常量池是放在Perm Gen区\(也就是方法区\)中；
