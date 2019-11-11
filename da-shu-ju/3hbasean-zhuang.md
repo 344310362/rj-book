@@ -8,13 +8,21 @@
 
 ![](/assets/bigdata/zookeeper/view1.png)
 
-### 配置 
+### 配置
 
 
+
+### 命令
+
+```
+# 启动
+zkServer.sh start
+
+# client 连接
+zkClient.sh -server node1:2181
+```
 
 ## 安装Hbase
-
-
 
 
 
