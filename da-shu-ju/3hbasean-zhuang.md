@@ -10,8 +10,6 @@
 
 ### 配置
 
-
-
 ### 命令
 
 ```
@@ -20,6 +18,12 @@ zkServer.sh start
 
 # client 连接
 zkClient.sh -server node1:2181
+
+# 查看
+ls /
+
+# 删除
+deleteall /hbase
 ```
 
 ## 安装Hbase
