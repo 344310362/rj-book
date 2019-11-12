@@ -82,9 +82,20 @@ b.行的删除版本要么未定义,要么大于当前事务版本号,这可以�
 
 InnoDB会为删除的每一行保存当前系统的版本号\(事务的ID\)作为删除标识
 
+```
+# 事物4执行了删除操作
+start   transaction;  
+delete from yang where id=1;
+commit;
+```
+
+| id | name | 创建时间\(事务ID\) | 删除时间\(事务ID\) |
+| :--- | :--- | :--- | :--- |
+| 1 | yang | 1 | 4 |
+| 2 | long | 1 | undefined |
+| 3 | fei | 1 | undefined |
+
 ##### UPDATE
 
 InnoDB执行UPDATE，实际上是新插入了一行记录，并保存其创建时间为当前事务的ID，同时保存当前事务ID到要UPDATE的行的删除时间.
-
-
 
