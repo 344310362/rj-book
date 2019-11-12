@@ -84,6 +84,7 @@ InnoDB会为删除的每一行保存当前系统的版本号\(事务的ID\)作�
 
 ```
 # 事物4执行了删除操作
+
 start   transaction;  
 delete from yang where id=1;
 commit;
