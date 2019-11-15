@@ -30,6 +30,12 @@ deleteall /hbase
 
 ### 配置
 
+#### 复制hadoop属性
+
+```
+cp core-site.xml hdfs-site.xml /usr/local/hbase/conf/
+```
+
 #### hbase-env.sh
 
 ```
