@@ -28,6 +28,10 @@ deleteall /hbase
 
 ## 安装Hbase
 
+> 因为我的hadoop是3.2.0的，hbase看了版本只支持到hadoop2.7，所以就下载了最新的hbase，折腾了一番不行，后面换了
+>
+> hbase-1.4.11
+
 ### 配置
 
 #### 复制hadoop属性
@@ -112,6 +116,4 @@ hbase-daemon.sh restart regionserver
 ### WebUI
 
 10.8.229.42:16010
-
-
 
