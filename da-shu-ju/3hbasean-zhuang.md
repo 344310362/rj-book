@@ -10,6 +10,8 @@
 
 ### 配置
 
+略
+
 ### 命令
 
 ```
@@ -117,8 +119,6 @@ hbase-daemon.sh restart regionserver
 
 10.8.229.42:16010
 
-
-
 ### HBase shell
 
 与`MySQL`不同,`HBase`是面向列的数据库. 通常会将某些列存储在不同的文件内. 比如`<id,name,age,sex>`有时会被拆分成`<id,name>`
@@ -142,7 +142,20 @@ TABLE
 #### 建表
 
 ```
+create 'user','name','age'
+```
 
+#### 查看表信息
+
+```
+hbase(main):018:0> describe 'user'
+Table user is ENABLED                                                                                                                                                                                                                                                         
+user                                                                                                                                                                                                                                                                          
+COLUMN FAMILIES DESCRIPTION                                                                                                                                                                                                                                                   
+{NAME => 'age', BLOOMFILTER => 'ROW', VERSIONS => '1', IN_MEMORY => 'false', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', COMPRESSION => 'NONE', MIN_VERSIONS => '0', BLOCKCACHE => 'true', BLOCKSIZE => '65536', REPLICATION_SCOPE => '0'}
+{NAME => 'name', BLOOMFILTER => 'ROW', VERSIONS => '1', IN_MEMORY => 'false', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', COMPRESSION => 'NONE', MIN_VERSIONS => '0', BLOCKCACHE => 'true', BLOCKSIZE => '65536', REPLICATION_SCOPE => '0'
+}                                                                                                                                                                                                                                                                             
+2 row(s) in 0.1100 seconds
 ```
 
 
