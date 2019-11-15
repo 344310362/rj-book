@@ -113,7 +113,5 @@ hbase-daemon.sh restart regionserver
 
 10.8.229.42:16010
 
-10.8.229.43:16010
 
-10.8.229.44:16010
 
