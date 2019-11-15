@@ -63,7 +63,19 @@ export HBASE_SSH_OPTS="-p 63501"
         <name>hbase.zookeeper.quorum</name>
         <value>node1:2181</value>
 </property>
+```
 
+#### regionservers
+
+```
+node2
+node3
+```
+
+#### backup-masters
+
+```
+node2
 ```
 
 
