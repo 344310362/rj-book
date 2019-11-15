@@ -63,6 +63,10 @@ export HBASE_SSH_OPTS="-p 63501"
         <name>hbase.zookeeper.quorum</name>
         <value>node1:2181</value>
 </property>
+<property>
+    <name>hbase.tmp.dir</name>
+    <value>/usr/local/hbase/data/tmp</value>
+</property>
 ```
 
 #### regionservers
