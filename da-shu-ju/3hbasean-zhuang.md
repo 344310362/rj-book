@@ -99,8 +99,6 @@ scp -P 63501 -r hbase/ root@node3:/usr/local/
 
 ### 启动
 
-
-
 ```
 # 启动 
 /usr/local/hbase/bin/../conf/
@@ -111,5 +109,7 @@ hbase-daemon.sh start master
 hbase-daemon.sh restart regionserver
 ```
 
+### WebUI
 
+10.8.229.42:16010
 
