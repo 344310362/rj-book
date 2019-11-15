@@ -41,5 +41,30 @@ export HBASE_CLASSPATH=/usr/local/hadoop/etc/hadoop
 export HBASE_SSH_OPTS="-p 63501"
 ```
 
+#### hbase-site.xml
+
+```
+ <property>
+         <name>hbase.master.info.port</name>
+         <value>16010</value>
+ </property>
+ <!-- 指定hbase在HDFS上存储的路径 -->
+<property>
+        <name>hbase.rootdir</name>
+        <value>hdfs://node1:9000/hbase</value>
+</property>
+<!-- 指定hbase是分布式的 -->
+<property>
+        <name>hbase.cluster.distributed</name>
+        <value>true</value>
+</property>
+<!-- 指定zk的地址，多个用“,”分割 -->
+<property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>node1:2181</value>
+</property>
+
+```
+
 
 
