@@ -79,7 +79,7 @@ node3
 #### backup-masters
 
 ```
-node2
+node1
 ```
 
 
