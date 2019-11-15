@@ -142,7 +142,7 @@ TABLE
 #### 建表
 
 ```
-create 'user','name','age'
+create 'user', 'info1','info2'
 ```
 
 #### 查看表信息
@@ -152,10 +152,40 @@ hbase(main):018:0> describe 'user'
 Table user is ENABLED                                                                                                                                                                                                                                                         
 user                                                                                                                                                                                                                                                                          
 COLUMN FAMILIES DESCRIPTION                                                                                                                                                                                                                                                   
-{NAME => 'age', BLOOMFILTER => 'ROW', VERSIONS => '1', IN_MEMORY => 'false', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', COMPRESSION => 'NONE', MIN_VERSIONS => '0', BLOCKCACHE => 'true', BLOCKSIZE => '65536', REPLICATION_SCOPE => '0'}
-{NAME => 'name', BLOOMFILTER => 'ROW', VERSIONS => '1', IN_MEMORY => 'false', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', COMPRESSION => 'NONE', MIN_VERSIONS => '0', BLOCKCACHE => 'true', BLOCKSIZE => '65536', REPLICATION_SCOPE => '0'
-}                                                                                                                                                                                                                                                                             
-2 row(s) in 0.1100 seconds
+{NAME => 'info1', BLOOMFILTER => 'ROW', VERSIONS => '1', IN_MEMORY => 'false', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', COMPRESSION => 'NONE', MIN_VERSIONS => '0', BLOCKCACHE => 'true', BLOCKSIZE => '65536', REPLICATION_SCOPE => '0
+'}                                                                                                                                                                                                                                                                            
+{NAME => 'info2', BLOOMFILTER => 'ROW', VERSIONS => '1', IN_MEMORY => 'false', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', COMPRESSION => 'NONE', MIN_VERSIONS => '0', BLOCKCACHE => 'true', BLOCKSIZE => '65536', REPLICATION_SCOPE => '0
+'}                                                                                                                                                                                                                                                                            
+2 row(s) in 0.0430 seconds
+```
+
+#### 插入/查看
+
+```
+hbase(main):026:0> put 'user','1234','info1:name','zhourj'
+0 row(s) in 0.4040 seconds
+
+
+hbase(main):027:0> scan 'user'
+ROW                                                                  COLUMN+CELL                                                                                                                                                                                              
+ 1234                                                                column=info1:name, timestamp=1573808076442, value=zhourj                                                                                                                                                 
+1 row(s) in 0.1600 seconds
+
+
+hbase(main):028:0> get 'user','1234'
+COLUMN                                                               CELL                                                                                                                                                                                                     
+ info1:name                                                          timestamp=1573808076442, value=zhourj                                                                                                                                                                    
+1 row(s) in 0.1090 seconds
+
+
+hbase(main):030:0> put 'user','1234','info1:age','23'
+0 row(s) in 0.0350 seconds
+
+hbase(main):031:0> get 'user','1234'
+COLUMN                                                               CELL                                                                                                                                                                                                     
+ info1:age                                                           timestamp=1573808265617, value=23                                                                                                                                                                        
+ info1:name                                                          timestamp=1573808076442, value=zhourj                                                                                                                                                                    
+1 row(s) in 0.0290 seconds
 ```
 
 
