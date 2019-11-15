@@ -469,6 +469,11 @@ firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.
 # hdfs 访问界面 
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="50070" accept"
 
+#namenode 9866
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="9866" accept"
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.43" port protocol="tcp" port="9866" accept"
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.44" port protocol="tcp" port="9866" accept"
+
 # datanode http address
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.133.45" port protocol="tcp" port="9864" accept"
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.8.229.43" port protocol="tcp" port="9864" accept"
