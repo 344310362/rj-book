@@ -92,3 +92,12 @@ node1
 
 
 
+### 拷贝集群信息
+
+```
+scp -P 63501 -r hbase/ root@node2:/usr/local/
+scp -P 63501 -r hbase/ root@node3:/usr/local/
+```
+
+
+
