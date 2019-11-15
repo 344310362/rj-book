@@ -30,3 +30,21 @@ deleteall /hbase
 
 
 
+### 配置
+
+
+
+```
+export HBASE_MANAGES_ZK=false
+export JAVA_HOME=/usr/local/java/jdk1.8.0_231
+export HBASE_CLASSPATH=/usr/local/hadoop/etc/hadoop
+export HBASE_SSH_OPTS="-p 63501"
+
+```
+
+
+
+
+
+
+
