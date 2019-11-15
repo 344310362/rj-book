@@ -117,3 +117,33 @@ hbase-daemon.sh restart regionserver
 
 10.8.229.42:16010
 
+
+
+### HBase shell
+
+与`MySQL`不同,`HBase`是面向列的数据库. 通常会将某些列存储在不同的文件内. 比如`<id,name,age,sex>`有时会被拆分成`<id,name>`
+
+`<id,age,sex>`分布在不同的文件内。
+
+```
+[root@node1 home]# hbase shell
+HBase Shell
+Use "help" to get list of supported commands.
+Use "exit" to quit this interactive shell.
+Version 1.4.11, r927981c8a0367b6d0ec2e6c94f12d57592dfa5e3, Fri Oct 18 01:04:38 CDT 2019
+
+hbase(main):001:0> list
+TABLE                                                                                                                                                                                                                                                                         
+0 row(s) in 0.8180 seconds
+
+=> []
+```
+
+#### 建表
+
+```
+
+```
+
+
+
