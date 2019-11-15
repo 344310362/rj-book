@@ -28,23 +28,18 @@ deleteall /hbase
 
 ## 安装Hbase
 
-
-
 ### 配置
 
-
+#### hbase-env.sh
 
 ```
+# 不使用hbase默认的ZK服务
 export HBASE_MANAGES_ZK=false
 export JAVA_HOME=/usr/local/java/jdk1.8.0_231
 export HBASE_CLASSPATH=/usr/local/hadoop/etc/hadoop
+# ssh 默认的断口是22，要调整就要修改这恶参数
 export HBASE_SSH_OPTS="-p 63501"
-
 ```
-
-
-
-
 
 
 
