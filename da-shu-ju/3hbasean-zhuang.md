@@ -50,11 +50,13 @@ export HBASE_SSH_OPTS="-p 63501"
 #### hbase-site.xml
 
 ```
- <property>
-         <name>hbase.master.info.port</name>
-         <value>16010</value>
- </property>
- <!-- 指定hbase在HDFS上存储的路径 -->
+<configuration>
+
+<property>
+        <name>hbase.master.info.port</name>
+        <value>16010</value>
+</property>
+<!-- 指定hbase在HDFS上存储的路径 -->
 <property>
         <name>hbase.rootdir</name>
         <value>hdfs://node1:9000/hbase</value>
@@ -70,8 +72,8 @@ export HBASE_SSH_OPTS="-p 63501"
         <value>node1:2181</value>
 </property>
 <property>
-    <name>hbase.tmp.dir</name>
-    <value>/usr/local/hbase/data/tmp</value>
+        <name>hbase.tmp.dir</name>
+        <value>/usr/local/hbase/data/tmp</value>
 </property>
 ```
 
