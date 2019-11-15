@@ -90,13 +90,25 @@ node3
 node1
 ```
 
-
-
 ### 拷贝集群信息
 
 ```
 scp -P 63501 -r hbase/ root@node2:/usr/local/
 scp -P 63501 -r hbase/ root@node3:/usr/local/
+```
+
+### 启动
+
+
+
+```
+# 启动 
+/usr/local/hbase/bin/../conf/
+
+# 重启 master
+hbase-daemon.sh start master
+# 重启 region
+hbase-daemon.sh restart regionserver
 ```
 
 
