@@ -40,4 +40,5 @@
 * [数据库](shu-ju-ku.md)
   * [Mysql常用命令](shu-ju-ku/mysqlchang-yong-ming-ling.md)
   * [MySQL 四种隔离级别](shu-ju-ku/mysql-si-zhong-ge-li-ji-bie.md)
+  * Mysql性能优化
 
