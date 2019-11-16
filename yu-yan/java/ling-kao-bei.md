@@ -85,5 +85,9 @@ NIO的直接内存是由**MappedByteBuffer**实现的。核心即是map\(\)方�
 
 NIO的MappedByteBuffer还有一个兄弟叫做HeapByteBuffer。顾名思义，它用来在堆中申请内存，本质是一个数组。由于它位于堆中，因此可受GC管控，易于回收。
 
+## 总结
+
+零拷贝一般需要底层硬件的支持，目的是减少CPU在文件拷贝占用资源，Java 的 transferTo 和 map 方案能在一定程度提高资源的传输效率，但是这类对象比普通的inputstream和outputstream创建来的慢。
+
 
 
