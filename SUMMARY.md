@@ -6,7 +6,7 @@
   * [Java](yu-yan/java.md)
     * [Java代理](yu-yan/java/javadai-li.md)
     * [类的加载过程](yu-yan/java/lei-de-jia-zai-guo-cheng.md)
-    * [Jvm内存模型](yu-yan/java/jvmnei-cun-mo-xing.md)
+    * [Jmm内存模型](yu-yan/java/jvmnei-cun-mo-xing.md)
     * [Jvm问题排查工具](yu-yan/java/jvmwen-ti-pai-cha-gong-ju.md)
     * [String那点事](yu-yan/java/stringna-dian-shi.md)
     * [零拷贝技术](yu-yan/java/ling-kao-bei.md)
