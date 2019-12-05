@@ -97,5 +97,20 @@ public static void main(String[] args) throws Exception {
 
 * 在JDK7.0版本，字符串常量池被移到了堆中了。至于为什么移到堆内，大概是由于方法区的内存空间太小了。
 
+* jdk6 intern 是复制字符串到永久带（方法区），jdk7只是记录首次出现实例到引用
+
+
+```
+// jdk6 intern 是复制字符串到永久带（方法区），jdk7只是记录首次出现实例到引用
+String str1 = new StringBuilder("计算机").append("软件").toString();
+System.out.println(str1.intern() == str1);
+
+String str2 = new StringBuilder("ja").append("va").toString();
+System.out.println(str2.intern() == str2);
+
+jdk6 运行是2个false
+jdk7 运行第一个true，第二个false （java字符常量池之前有）
+```
+
 
 
