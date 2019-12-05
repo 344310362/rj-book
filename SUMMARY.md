@@ -23,6 +23,8 @@
   * [1.Hadoop安装](da-shu-ju/hadoopan-zhuang.md)
   * [2.Hive安装](da-shu-ju/2hivean-zhuang.md)
   * [3.Hbase安装](da-shu-ju/3hbasean-zhuang.md)
+  * 4.Spark安装
+  * ELK+Filebeat
 * [Devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
 * 压力测试
