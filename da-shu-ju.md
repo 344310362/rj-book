@@ -100,5 +100,164 @@ output.logstash:
 
 #### logstash
 
+设置filebeat输入，并且输出到elasticsearch，并且设置同一条日志多行合并
+
+```
+/etc/logstash/conf.d
+
+input {
+    beats {
+    port => 63003
+}
+}
+filter {
+	multiline {
+	pattern => "^%{TIMESTAMP_ISO8601}"
+	what => "previous"
+	negate => true
+	}
+}
+
+output{
+    if "244.173-vmp-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.173-logstash-tomcat-vmp-%{+yyyy.MM.dd}"
+        }
+    }
+    
+    if "244.173-pontus-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.173-logstash-tomcat-pontus-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.173-console-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.173-logstash-tomcat-console-%{+yyyy.MM.dd}"
+        }
+    }
+    
+    if "244.173-poseidon-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.173-logstash-tomcat-poseidon-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.173-aipaas-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.173-logstash-tomcat-aipaas-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.173-api-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.173-logstash-tomcat-api-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.174-vmp-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.174-logstash-tomcat-vmp-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.174-pontus-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.174-logstash-tomcat-pontus-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.174-console-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.174-logstash-tomcat-console-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.174-poseidon-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.174-logstash-tomcat-poseidon-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.174-aipaas-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.174-logstash-tomcat-aipaas-%{+yyyy.MM.dd}"
+        }
+    }
+
+    if "244.174-api-log" in [tags] {
+        elasticsearch {
+            hosts => ["121.226.244.152:63000"]
+            index => "244.174-logstash-tomcat-api-%{+yyyy.MM.dd}"
+        }
+    }
+
+    stdout {
+    codec => rubydebug {}
+    }
+}
+
+```
+
+multiline 插件安装
+
+插件查看
+
+```
+[root@cluster-suqiandatacenter-ahb-0001 conf.d]# /usr/share/logstash/bin/logstash-plugin list
+logstash-codec-avro
+logstash-codec-cef
+logstash-codec-collectd
+logstash-codec-dots
+logstash-codec-edn
+logstash-codec-edn_lines
+logstash-codec-es_bulk
+logstash-codec-fluent
+logstash-codec-graphite
+logstash-codec-json
+logstash-codec-json_lines
+logstash-codec-line
+logstash-codec-msgpack
+logstash-codec-multiline
+logstash-codec-netflow
+logstash-codec-plain
+logstash-codec-rubydebug
+logstash-filter-aggregate
+logstash-filter-anonymize
+logstash-filter-cidr
+logstash-filter-clone
+logstash-filter-csv
+logstash-filter-date
+logstash-filter-de_dot
+logstash-filter-dissect
+logstash-filter-dns
+logstash-filter-drop
+logstash-filter-elasticsearch
+logstash-filter-fingerprint
+logstash-filter-geoip
+logstash-filter-grok
+logstash-filter-http
+logstash-filter-jdbc_static
+logstash-filter-jdbc_streaming
+
+```
+
+安装
+
+```
+logstash-plugin install logstash-filter-multiline
+```
+
 
 
