@@ -5,9 +5,13 @@
 ## ELASTIC
 
 * elasticsearch  负责日志的搜索和存储
-* filebeat            负责日志的采集 golang编写的
+* filebeat            负责日志的采集 golang编写的轻量级应用
 * logstash          负责日志的增强处理（格式转换/无用信息过滤等）
 * kibana              负责日志的展示，也提供了不错的图表功能
+
+## 使用
+
+
 
 
 
