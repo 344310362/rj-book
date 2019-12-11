@@ -2,6 +2,10 @@
 
 > 随着架构微服务的趋势，应用数量的不断扩大，应用部署的机器也可能不尽相同，给日志查看带来了不少麻烦，业内比较流行的解决方案就是ELK
 
+参考：
+
+* [https://elkguide.elasticsearch.cn/beats/file.html](https://elkguide.elasticsearch.cn/beats/file.html)
+
 ## ELASTIC
 
 * elasticsearch  负责日志的搜索和存储
