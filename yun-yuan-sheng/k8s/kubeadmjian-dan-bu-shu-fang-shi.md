@@ -111,5 +111,68 @@ yum install -y kubeadm kubectl kubelet
 systemctl enable kubelet && systemctl start kubelet
 ```
 
+## Master安装
+
+### 初始化
+
+```
+kubeadm init \
+--apiserver-advertise-address=183.134.11.146 \
+--image-repository registry.aliyuncs.com/google_containers \
+--kubernetes-version v1.17.0 \
+--service-cidr=10.243.0.0/16 \
+--pod-network-cidr=10.244.0.0/16
+```
+
+### 执行结果
+
+```
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 183.134.11.146:6443 --token iqgs60.6lp4wd6aet28ncmf \
+    --discovery-token-ca-cert-hash sha256:b9450b443c2876f3b6547d214b727ab403e2d261c8cda5f6ea7a7fce3ddd45ea 
+```
+
+### 执行提示命令配置kubectl
+
+```
+mkdir -p $HOME/.kube
+
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+### 查看服务器启动装
+
+* 查看资源
+* ```
+  kubectl get pods,svc -n kube-system
+  kubectl get cs
+  ```
+* 查看节点
+* ```
+  kubectl get nodes
+  ```
+
+## 节点安装
+
+```
+kubeadm join 183.134.11.146:6443 --token iqgs60.6lp4wd6aet28ncmf \
+    --discovery-token-ca-cert-hash sha256:b9450b443c2876f3b6547d214b727ab403e2d261c8cda5f6ea7a7fce3ddd45ea 
+```
+
 
 
