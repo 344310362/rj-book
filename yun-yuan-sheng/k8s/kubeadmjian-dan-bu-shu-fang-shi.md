@@ -89,7 +89,6 @@ EOF
 
   systemctl start docker
   ```
-
 * 配置docker-hub镜像
 
 ```
@@ -105,7 +104,7 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
-### 安装k8s组件
+### 安装k8s公共组件
 
 ```
 yum install -y kubeadm kubectl kubelet
