@@ -27,6 +27,8 @@
   * [ELK+Filebeat](da-shu-ju/elk+filebeat.md)
 * [Devops](devops.md)
 * [云原生](yun-yuan-sheng.md)
+  * [k8s](yun-yuan-sheng/k8s.md)
+    * [kubeadm-简单部署方式](yun-yuan-sheng/k8s/kubeadmjian-dan-bu-shu-fang-shi.md)
 * 压力测试
 * [数据库](shu-ju-ku.md)
   * [Mysql常用命令](shu-ju-ku/mysqlchang-yong-ming-ling.md)
