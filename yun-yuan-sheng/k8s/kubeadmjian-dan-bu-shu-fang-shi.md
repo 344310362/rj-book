@@ -21,7 +21,7 @@ hostnamectl --static set-hostname k8s-node1
 ### 配置host
 
 ```
-183.134.11.139	k8s-node1
+183.134.11.139    k8s-node1
 183.134.11.146  k8s-master1
 ```
 
@@ -78,7 +78,39 @@ EOF
 
 ## 公共服务安装
 
+### 安装docker
 
+* 安装docker 1.13.1
+
+* ```
+  yum install -y docker
+
+  systemctl enable docker
+
+  systemctl start docker
+  ```
+
+* 配置docker-hub镜像
+
+```
+vi /etc/docker/daemon.json
+
+{
+
+"registry-mirrors": ["https://registry.docker-cn.com"]
+
+}
+
+systemctl daemon-reload
+systemctl restart docker
+```
+
+### 安装k8s组件
+
+```
+yum install -y kubeadm kubectl kubelet
+systemctl enable kubelet && systemctl start kubelet
+```
 
 
 
