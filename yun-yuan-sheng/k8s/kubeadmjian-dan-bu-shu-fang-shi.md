@@ -168,6 +168,18 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
   kubectl get nodes
   ```
 
+### 安装网络
+
+kubernetes 文档里面提供了很多网络模式
+
+[https://kubernetes.io/docs/concepts/cluster-administration/addons/](https://kubernetes.io/docs/concepts/cluster-administration/addons/)
+
+我这边选择了calico 网络
+
+```
+kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml
+```
+
 ## 节点安装
 
 ```
