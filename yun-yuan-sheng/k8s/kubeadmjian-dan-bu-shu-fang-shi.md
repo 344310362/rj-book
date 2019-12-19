@@ -27,9 +27,10 @@ hostnamectl --static set-hostname k8s-node1
 
 ### 关闭防火墙
 
+```
 systemctl disable firewalld.service
-
 systemctl stop firewalld.service
+```
 
 ### 配置路由转发
 
