@@ -33,7 +33,7 @@
 * [数据库](shu-ju-ku.md)
   * [Mysql常用命令](shu-ju-ku/mysqlchang-yong-ming-ling.md)
   * [MySQL 四种隔离级别](shu-ju-ku/mysql-si-zhong-ge-li-ji-bie.md)
-  * Mysql性能优化
+  * [Mysql性能优化](shu-ju-ku/mysqlxing-neng-you-hua.md)
 * [运维](yun-wei.md)
   * [服务安装](yun-wei/fu-wu-an-zhuang.md)
     * [mysql](yun-wei/fu-wu-an-zhuang/mysql.md)
