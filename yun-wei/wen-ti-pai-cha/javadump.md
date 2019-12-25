@@ -14,9 +14,15 @@
   ```
   
 ### 线程dump
-
+1. 通过ps或者top找出自己想要的进程id
+2. top -Hp pid 找出进程id里面最耗费的CPU的线程ID
+3. printf "%x\n" 21742 线程ID转成16进制
+4. 打印进程的堆栈信息，查找对应的线程ID信息，然后排查
 ```
-jstack 7027 > jstack.log
+# 打印进程 21711 信息到日志
+jstack 21711 > jstack.log
+# 直接过滤21711进程里面的线程54ee信息
+jstack 21711 | grep 54ee
 ```
 
 ---
