@@ -2,7 +2,7 @@
 
 ---
 
-作者其他文章
+作者文章
 
 * [有效的单元测试](https://zhruijin.gitee.io/blog/blog/2018/01/08/effecttest/ "有效的单元测试")
 * [何为devops](https://zhruijin.gitee.io/blog/blog/2018/01/08/devops/)
