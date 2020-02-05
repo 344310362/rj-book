@@ -61,9 +61,8 @@
 
   1. 借助 取样器-BeanShell取样器，编写业务逻辑生成签名
   2. 将签名作为下面请求的入参
-  
-  
-  ```
+
+```
   import org.apache.commons.codec.digest.DigestUtils;
 
 
@@ -96,10 +95,11 @@
   log.info("grantType:"+grantType);
   log.info("signature:"+signature);
   log.info("\n=============================\n")
-
-  ```
+```
 
 * 监控
+  * 查看结果树：可以看每个请求的详细信息
+  * 汇总报告：全局获知请求的成功失败耗时情况
 
-
+![](/assets/yace/project.png)
 
