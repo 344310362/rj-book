@@ -32,7 +32,7 @@
 * [性能测试](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian.md)
   * [开篇](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian/kai-pian.md)
   * [Jmeter](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian/jmeter.md)
-  * JVM监控
+  * [Jvisual](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian/jvmjian-kong.md)
 * [数据库](shu-ju-ku.md)
   * [Mysql常用命令](shu-ju-ku/mysqlchang-yong-ming-ling.md)
   * [MySQL 四种隔离级别](shu-ju-ku/mysql-si-zhong-ge-li-ji-bie.md)

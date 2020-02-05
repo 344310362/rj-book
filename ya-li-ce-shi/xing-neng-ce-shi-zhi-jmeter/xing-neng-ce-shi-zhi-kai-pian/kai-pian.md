@@ -29,7 +29,7 @@
 
 * TPS:每秒处理请求的个数
 
-*  90%请求：90%的请求的平均耗时
+* 90%请求：90%的请求的平均耗时
 
 * Min：最小请求的时间
 
@@ -91,12 +91,10 @@
 
 * io读写频繁
 
-
-
 ## 实施
 
-* Jmeter
-* Jvisual
+* [Jmeter](/ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian/jmeter.md)
+* [Jvisual](/ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian/jvmjian-kong.md)
 
 
 
