@@ -65,11 +65,11 @@
    1. 资源不足（CPU/内存/带宽/磁盘）
    2. 系统的连接数问题
 
-## 系统TOP命令
+## 监控
 
-![](/assets/yace/kaipian/top.png)
+### 系统TOP命令![](/assets/yace/kaipian/top.png)
 
-### us
+#### us
 
 用户CPU时间（非内核进程占用时间）（单位百分比）。us的值比较高时，说明用户进程消耗的CPU时间多
 
@@ -77,7 +77,7 @@
 
 * 代码有非常消耗CPU的操作，例如死循环
 
-### sy
+#### sy
 
 系统使用CPU时间（单位百分比）。sy的值高时，说明内核消耗的CPU资源多，这并不是良性表现，我们应该检查原因。
 
@@ -85,11 +85,19 @@
 
 * 线程主动切换频繁
 
-### wa
+#### wa
 
 等待IO的CPU时间，wait越大则机器io性能就越差。说明IO等待比较严重，这可能由于磁盘大量操作随机访问造成，也有可能磁盘出现瓶颈（块操作）
 
 * io读写频繁
+
+### Jmeter 监控插件
+
+![](/assets/yace/kaipian/jmeter.png)
+
+### Jvisual
+
+![](/assets/yace/jvisual/jvm1.png)![](/assets/yace/kaipian/jvm2.png)
 
 ## 实施
 
