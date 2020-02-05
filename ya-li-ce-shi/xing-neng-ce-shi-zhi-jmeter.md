@@ -36,7 +36,7 @@
 - jmeter官网下载
     - jmeter-websocket-samplers-1.2.2.jar
 
-- maven仓库
+- maven仓库下载
     - websocket-common-9.4.20.v20190813.jar
     - websocket-api-9.4.20.v20190813.jar
     - websocket-client-9.4.20.v20190813.jar
