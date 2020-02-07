@@ -19,6 +19,12 @@ JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.rmi.port=8888"  ## 配置�
 JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.authenticat=true"  ## ## 配置远程jMX 是否需要认证
 JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false" ## 配置远程jMX是否需要ssl
 ```
+jmxremote密码设置（也可以不），$JAVA_HOME/jre/lib/management/jmxremote.password.template,复制一份并改名为jmxremote.password,然后修改只读权限并编辑jmxremote.passwrod，取消以下两行注释：
+```
+#monitorRole QED
+#controlRole R&D
+```
+
 
 ### jar应用开启JMX
 
@@ -62,5 +68,5 @@ permission java.security.AllPermission;
 
 ## Jmx与Jstatd连接的区别 {#jmx连接与jstatd连接的区别}
 
-
+jmx一般是监控某个应用的，jstatd可以监控整台机器的所有jvm应用。jstatd还需要远程服务器开启jstatd服务。
 
