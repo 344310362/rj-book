@@ -1,2 +1,42 @@
-sdf
+## 引言
+
+> VisualVm 是java官方提供的一个性能监控工具，一般在jdk/bin 目录下面就有对应的exe应用。它是借助JMX代理来监控java应用的。
+
+visualvm 上面有2种连接，jmx和jstatd,网上关于使用visualvm很杂，有的说要改策略，起jstatd，设置密码，改jvm启动参数一系列。其实这些不是都要配置的，你用什么样的监控模式就配置哪些就好。
+
+## JMX
+
+JMX\(ava Management Extensions\)，是一个为应用程序植入管理功能的框架。用户可以在任何Java应用程序中使用这些代理和服务实现管理。
+
+### tomcat应用开启jmx
+
+需要在catalina.sh 中添加如下配置：
+
+```
+JAVA_OPTS="$JAVA_OPTS -Djava.rmi.server.hostname=192.168.54.5"  ## 配置远程的主机
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.port=8888"  ## 配置远程jMX端口
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.rmi.port=8888"  ## 配置远程jMX端口
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.authenticat=true"  ## ## 配置远程jMX 是否需要认证
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false" ## 配置远程jMX是否需要ssl
+```
+
+### jar应用开启JMX
+
+```
+nohup
+java
+-Djava.rmi.server.hostname=123.58.99.79
+-Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=60001
+-Dcom.sun.management.jmxremote.authenticate=false
+-Dcom.sun.management.jmxremote.ssl=false
+-Dconfig=websocket.properties
+-Dport=9301
+-Dlogback.configurationFile=/usr/local/cloudv/component/websocket1/logback.xml
+-jar
+websocket1.jar
+&
+```
+
+
 

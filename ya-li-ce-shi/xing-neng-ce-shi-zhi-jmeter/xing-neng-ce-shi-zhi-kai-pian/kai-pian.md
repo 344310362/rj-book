@@ -67,7 +67,8 @@
 
 ## 监控
 
-### 系统TOP命令![](/assets/yace/kaipian/top.png)
+### 系统TOP命令
+![](/assets/yace/kaipian/top.png)
 
 #### us
 
@@ -97,7 +98,8 @@
 
 ### Jvisual
 
-![](/assets/yace/jvisual/jvm1.png)![](/assets/yace/kaipian/jvm2.png)
+![](/assets/yace/jvisual/jvm1.png)
+![](/assets/yace/kaipian/jvm2.png)
 
 ## 实施
 
