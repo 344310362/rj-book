@@ -40,5 +40,27 @@ websocket1.jar
 
 ## Jstatd连接
 
+JVM jstat Daemon：守护进程，一个RMI服务器程序，用于监控本地所有JVM从创建开始直到销毁整个过程中的资源使用情况，同时提供接口给监控工具（如这里的VisualVM），让工具能连接到本机所有的JVM。
+
+### 创建安全策略
+
+由于jstatd server没有提供任何对远程client端的认证，客户端程序获取到本地当前用户的所有JVM信息后可能存在安全隐患，所以jstatd要求启动之前必须指定本地安全策略，否则jstatd进程无法启动。
+
+新建文件 jstatd-all.policy 添加如下：
+
+```
+grant codebase "file:/home/intsmaze/jdk1.8.0_144/lib/tools.jar" {
+permission java.security.AllPermission;
+};
+```
+
+### 启动jstatd服务
+
+```
+./jstatd -J-Djava.security.policy=/usr/local/jdk1.8.0/bin/jstatd-all.policy -J-Djava.rmi.server.logCalls=true
+```
+
+## Jmx与Jstatd连接的区别 {#jmx连接与jstatd连接的区别}
+
 
 
