@@ -4,7 +4,7 @@
 
 visualvm 上面有2种连接，jmx和jstatd,网上关于使用visualvm很杂，有的说要改策略，起jstatd，设置密码，改jvm启动参数一系列。其实这些不是都要配置的，你用什么样的监控模式就配置哪些就好。
 
-## JMX
+## JMX连接
 
 JMX\(ava Management Extensions\)，是一个为应用程序植入管理功能的框架。用户可以在任何Java应用程序中使用这些代理和服务实现管理。
 
@@ -25,7 +25,7 @@ JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false" ## 配置远程j
 ```
 nohup
 java
--Djava.rmi.server.hostname=123.58.99.79
+-Djava.rmi.server.hostname=1.1.1.1
 -Dcom.sun.management.jmxremote
 -Dcom.sun.management.jmxremote.port=60001
 -Dcom.sun.management.jmxremote.authenticate=false
@@ -37,6 +37,8 @@ java
 websocket1.jar
 &
 ```
+
+## Jstatd连接
 
 
 
