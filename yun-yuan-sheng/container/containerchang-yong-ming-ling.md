@@ -64,6 +64,12 @@
    docker cp Name:/container-path to-path  
    docker cp ID:/container-path to-path
    ```
+6. 进入一个运行中容器
+   ```
+   docker container exec -it [containerID] /bin/bash
+   ```
+
+   
 ## 保存和加载镜像
 
 1. 镜像保存成tar
