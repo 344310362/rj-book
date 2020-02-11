@@ -29,6 +29,7 @@
 * [云原生](yun-yuan-sheng.md)
   * [k8s](yun-yuan-sheng/k8s.md)
     * [kubeadm-简单部署方式](yun-yuan-sheng/k8s/kubeadmjian-dan-bu-shu-fang-shi.md)
+    * [kubernetes组件概述](yun-yuan-sheng/k8s/kuberneteszu-jian-gai-shu.md)
 * [性能测试](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian.md)
   * [开篇](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian/kai-pian.md)
   * [Jmeter](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian/jmeter.md)
