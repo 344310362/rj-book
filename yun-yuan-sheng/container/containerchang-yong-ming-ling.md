@@ -40,12 +40,20 @@
    docker rm `docker ps -a -q`
    ```
 3. 停止、启动、杀死一个容器
-
    ```
    docker stop Name/ID  
    docker start Name/ID 
    docker kill Name/ID
    ```
+4. 容器日志查看
+   ```
+   docker logs Name/ID  
+   ```
+
+
+
+
+
 
 
 
