@@ -37,16 +37,12 @@ etcd 是兼具一致性和高可用性的键值数据库，可以作为保存 Ku
 
 #### kubelet
 
-master将pod分配给某个具体的node节点，node上面的代理根据PodSpecs的描述，负责将pod具体的部署起来。
+负责Pod对应的容器的 创建、启停等任务，与Master节点密切协作，实现集群管理的基本功能。master 将pod分配到某个节点，节点上面的kubelet 根据podSpec 描述将pod创建起来。
 
-kube-proxy
+#### kube-proxy
 
+集群中每个节点上运行的网络代理,实现 Kubernetes service 概念的一部分。kube-proxy 维护节点上的网络规则。这些网络规则允许从集群内部或外部的网络会话与 Pod 进行网络通信。负责为Service提供cluster内部的服务发现和负载均衡；
 
-
-  
-
-
-  
 
 
 
