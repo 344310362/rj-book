@@ -49,6 +49,95 @@
    ```
    docker logs Name/ID  
    ```
+5. 显示一个运行的容器里面的进程信息
+   ```
+   docker top Name/ID  
+   ```
+6. 从容器里面拷贝文件/目录到本地一个路径
+   ```
+   docker cp Name:/container-path to-path  
+   docker cp ID:/container-path to-path
+   ```
+## 保存和加载镜像
+
+1. 镜像保存成tar
+   ```
+   docker save image-name -o file-path
+   ```
+2. 加载tar镜像
+   ```
+   docker load -i file-path
+   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
