@@ -53,4 +53,8 @@
     * [elasticsearch](yun-wei/fu-wu-an-zhuang/elasticsearch.md)
   * [问题排查](yun-wei/wen-ti-pai-cha.md)
     * [Java\_dump](yun-wei/wen-ti-pai-cha/javadump.md)
+* [架构](jia-gou.md)
+  * [Dubbo](jia-gou/dubbo.md)
+  * [SpringCloud](jia-gou/springcloud.md)
+    * [SpringCloud组件](jia-gou/springcloud/springcloudzu-jian.md)
 
