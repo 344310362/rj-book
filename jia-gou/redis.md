@@ -10,3 +10,13 @@
 
 
 
+## 三种部署模式
+
+standaloan\(单机模式\)
+
+ssentinel\(哨兵模式\)
+
+redis-cluster\(集群模式\)
+
+
+
