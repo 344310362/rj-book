@@ -52,8 +52,24 @@ host:117.121.101.134:443
 
 ```
 HTTP/1.1 200 OK
-Date:
+Date:Sun, 23 Feb 2020 07:31:24 GMT
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Length: 129
+Content-Type: application/json; charset=UTF-8
+...
 ```
+返回了请求的状态，200状态码对应的就是成功，还有一些链接状态，内容的编码，长度，媒体类型等。
+
+* 响应的正文
+
+```
+{result: 0, data: ["Vue", "Python", "Java", "flutter", "springboot", "docker", "React", "小程序"],…}
+data: ["Vue", "Python", "Java", "flutter", "springboot", "docker", "React", "小程序"]
+msg: "成功"
+result: 0
+```
+返回了消息的具体信息，这个消息有可能是一串html文本，也可能是json串，图片，附件都有可能。
 
 
 
