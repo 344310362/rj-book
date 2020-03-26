@@ -30,6 +30,7 @@
   * [ElasticSearch](da-shu-ju/elasticsearch.md)
     * [ES基本原理](da-shu-ju/elasticsearch/esji-ben-yuan-li.md)
 * [Devops](devops.md)
+  * [nginx切流量](devops/nginxqie-liu-liang.md)
 * [云原生](yun-yuan-sheng.md)
   * [k8s](yun-yuan-sheng/k8s.md)
     * [kubernetes组件概述](yun-yuan-sheng/k8s/kuberneteszu-jian-gai-shu.md)
