@@ -1,5 +1,5 @@
 ## make
- make 用来为 slice，map 或 chan 类型分配内存和初始化一个对象
+ make 用来为 slice，map 或 chan 类型分配内存和初始化一个对象，类似new
  
 
 ```
