@@ -1,9 +1,15 @@
 # 环境变量
+go env 查看环境变量
 ## GOROOT
 go程序的安装目录
 
 ## GOPATH
 go源码的位置（工作空间），可以有多个。window环境下用“；”隔开，mac和linux环境中用“：”隔开
+gopath下面有3个目录
+### src
+### pkg
+### bin
+
 ## GOBIN
 
 # 权限控制
