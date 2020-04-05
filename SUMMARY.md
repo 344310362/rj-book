@@ -13,6 +13,7 @@
     * [并发问题](yu-yan/java/bing-fa-wen-ti.md)
     * [wait与sleep](yu-yan/java/waityu-sleep.md)
   * [Go](go.md)
+    * [入门核心概念](go/ru-men-he-xin-gai-nian.md)
   * [Python](yu-yan/python.md)
   * [Php](yu-yan/php.md)
 * [Tomcat](tomcat.md)
