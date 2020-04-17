@@ -17,6 +17,8 @@
     * [基础语法](go/ji-chu-yu-fa.md)
   * [Python](yu-yan/python.md)
   * [Php](yu-yan/php.md)
+  * [Vue](yu-yan/vue.md)
+    * [父子组建传值](yu-yan/vue/fu-zi-zu-jian-chuan-zhi.md)
 * [Tomcat](tomcat.md)
   * [Tomcat类加载机制](tomcat/tomcatlei-jia-zai-ji-zhi.md)
   * [Tomcat性能调优](tomcat/tomcatxing-neng-diao-you.md)
