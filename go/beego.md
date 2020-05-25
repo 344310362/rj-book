@@ -39,6 +39,13 @@ myproject  //项目文件夹
     └── index.tpl  //默认的模版文件
 ```
 
+# 启动
+
+
+```
+bee run # 具体的端口在 conf/app.conf 里面
+```
+
 
 
 
