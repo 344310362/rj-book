@@ -15,6 +15,7 @@
   * [Go](go.md)
     * [入门核心概念](go/ru-men-he-xin-gai-nian.md)
     * [基础语法](go/ji-chu-yu-fa.md)
+    * [Beego](go/beego.md)
   * [Python](yu-yan/python.md)
   * [Php](yu-yan/php.md)
   * [Vue](yu-yan/vue.md)
