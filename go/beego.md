@@ -17,7 +17,7 @@ _安装完毕后，需要将$GOPATH/bin添加到环境变量中，便于在所�
 ```
 # 初始化 bee 项目
 
-$GOPATH/src下执行bee new firstproject：
+在 $GOPATH/src下执行bee new [project_name]
 
 # beego 项目结构说明
 
