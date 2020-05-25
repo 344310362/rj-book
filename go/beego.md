@@ -1,9 +1,11 @@
 # 安装
 
+[官方文档](https://beego.me/)
+
 Golang 环境默认安装
 
-**安装beego源码：**go get github.com/astaxie/beego
-**升级beego源码：**go get -u github.com/astaxie/beego
+**安装beego源码：**go get github.com/astaxie/beego  
+**升级beego源码：**go get -u github.com/astaxie/beego  
 **安装bee工具：**go get github.com/beego/bee
 
 _安装完毕后，需要将$GOPATH/bin添加到环境变量中，便于在所有路径下使用bee命令_
@@ -11,16 +13,17 @@ _安装完毕后，需要将$GOPATH/bin添加到环境变量中，便于在所�
 如果 beego 下载很慢，hosts 修改如下：
 
 具体的 ip 根据 [IP查找工具](https://www.ipaddress.com/ip-lookup) 获取
+
 ```
 192.30.253.112 github.com
 151.101.185.194 github.global.ssl.fastly.net
 ```
+
 # 初始化 bee 项目
 
-在 $GOPATH/src下执行bee new [project_name]
+在 $GOPATH/src下执行bee new \[project\_name\]
 
 # beego 项目结构说明
-
 
 ```
 myproject  //项目文件夹
@@ -44,11 +47,9 @@ myproject  //项目文件夹
 
 # 启动
 
-
 ```
 bee run # 具体的端口在 conf/app.conf 里面
 ```
-
 
 
 
