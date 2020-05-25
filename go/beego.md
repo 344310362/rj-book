@@ -15,6 +15,9 @@ _安装完毕后，需要将$GOPATH/bin添加到环境变量中，便于在所�
 192.30.253.112 github.com
 151.101.185.194 github.global.ssl.fastly.net
 ```
+# 初始化 bee 项目
+
+$GOPATH/src下执行bee new firstproject：
 
 # beego 项目结构说明
 
