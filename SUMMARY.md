@@ -62,6 +62,7 @@
     * [kuberneters](yun-wei/fu-wu-an-zhuang/kuberneters.md)
     * [gitlab](yun-wei/fu-wu-an-zhuang/gitlab.md)
     * [elasticsearch](yun-wei/fu-wu-an-zhuang/elasticsearch.md)
+    * [openJdk](yun-wei/fu-wu-an-zhuang/openjdk.md)
   * [问题排查](yun-wei/wen-ti-pai-cha.md)
     * [Java\_dump](yun-wei/wen-ti-pai-cha/javadump.md)
 * [架构](jia-gou.md)
