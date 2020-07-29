@@ -6,8 +6,7 @@
     "github",
     "splitter",
     "toggle-chapters",
-    "donate",
-    "-sharing"
+    "donate"
     ],
     "pluginsConfig": {
         "autocover": {
@@ -35,28 +34,6 @@
             "title": "",
             "button": "赏",
             "wechatText": "微信打赏"
-        },
-        "sharing": {
-            "douban": false,
-            "facebook": false,
-            "google": false,
-            "hatenaBookmark": false,
-            "instapaper": false,
-            "line": false,
-            "linkedin": false,
-            "messenger": false,
-            "pocket": false,
-            "qq": false,
-            "qzone": false,
-            "stumbleupon": false,
-            "twitter": false,
-            "viber": false,
-            "vk": false,
-            "weibo": false,
-            "whatsapp": false,
-            "all": [
-            "weibo","qq","qzone","google","douban"
-            ]
         }
     }
 }
