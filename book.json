@@ -6,7 +6,8 @@
     "github",
     "splitter",
     "toggle-chapters",
-    "donate"
+    "donate",
+    "icp"
     ],
     "pluginsConfig": {
         "autocover": {
@@ -34,6 +35,9 @@
             "title": "",
             "button": "赏",
             "wechatText": "微信打赏"
+        },
+        "icp": {
+            "number": "闽ICP备20014923号"
         }
     }
 }
