@@ -2,21 +2,17 @@
 
 kubernetes是一个开源的，用于管理多个主机上的容器化的应用，让部署容器化的应用简单且高效，Kubernetes提供了应用部署，规划，更新，维护的一种机制。它的前身是谷歌的Borg系统，在Google内部，容器技术已经应用了很多年，Borg系统运行管理着成千上万的容器应用。
 
-
-
-1. 2013年 dotCloud 公司开源了 docker 项目，但是 以 cgroup,namespace 的容器技术并不是他们独创的。
+1. 2013年 dotCloud 公司开源了 docker 项目，但是 以 cgroup,namespace 的容器技术并不是他们独创的。  
    1. 以 openStack\(传统虚拟化\)作为基础设施的云计算正热火朝天
 
    1. 它的成功主要有2点：开源 + docker 镜像的创新（方便部署应用）
+
 2. 运行容器的环境
    1. 有安装 docker 基础环境的机器均可运行 docker 服务
 3. 容器集群化管理
-   1. docker swarm ：docker 自家出品的，轻量级但是功能有限
-   2. 3. k8s：
-
-
-
-
+   1. docker compose: 单机下运行多容器服务的工具
+   2. docker swarm ：docker 自家出品的，轻量级但是功能有限
+   3. k8s：成熟稳定功能强大
 
 ## 服务编排
 
