@@ -65,6 +65,8 @@
     * [openJdk](yun-wei/fu-wu-an-zhuang/openjdk.md)
   * [问题排查](yun-wei/wen-ti-pai-cha.md)
     * [Java\_dump](yun-wei/wen-ti-pai-cha/javadump.md)
+  * [docker-compose](yun-wei/docker-compose.md)
+    * [es+kibana](yun-wei/docker-compose/es+kibana.md)
 * [架构](jia-gou.md)
   * [Dubbo](jia-gou/dubbo.md)
   * [SpringCloud](jia-gou/springcloud.md)
