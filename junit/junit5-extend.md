@@ -22,3 +22,22 @@ public class HelloJMockitTest {
 
 ![](/assets/junit/junit5-extend-serviceLoad.png)
 
+
+
+## Extension 有 4 种添加方式
+
+1. 测试类上面添加 @ExtendWith
+2. serviceLoad：声明在 METE-INF.service 里面
+3. 在 annotation 中添加 @ExtendWith
+
+
+    ```
+    @Target({ ElementType.ANNOTATION_TYPE, ElementType.METHOD })
+    @Retention(RetentionPolicy.RUNTIME)
+    @Documented
+    @API(status = EXPERIMENTAL, since = "5.0")
+    @TestTemplate
+    @ExtendWith(ParameterizedTestExtension.class)
+    public @interface ParameterizedTest {}
+    ```
+4.通过 @RegisterExtension 
