@@ -41,6 +41,7 @@
     * [kubernetes组件概述](yun-yuan-sheng/k8s/kuberneteszu-jian-gai-shu.md)
     * [kubeadm-简单部署方式](yun-yuan-sheng/k8s/kubeadmjian-dan-bu-shu-fang-shi.md)
     * [网络组件](yun-yuan-sheng/k8s/wang-luo-zu-jian.md)
+    * [docker-desktop](yun-yuan-sheng/k8s/docker-desktop.md)
   * [container](yun-yuan-sheng/container.md)
     * [container常用命令](yun-yuan-sheng/container/containerchang-yong-ming-ling.md)
 * [性能测试](ya-li-ce-shi/xing-neng-ce-shi-zhi-jmeter/xing-neng-ce-shi-zhi-kai-pian.md)
